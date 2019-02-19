@@ -1,0 +1,43 @@
+{
+  "name": "@fs/eslint-config-frontier-react",
+  "version": "1.0.0",
+  "description": "A common ESLint configuration setup for frontier apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fs-webdev/eslint-config-frontier-react.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-config"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fs-webdev/eslint-config-frontier-react/issues"
+  },
+  "homepage": "https://github.com/fs-webdev/eslint-config-frontier-react#readme",
+  "peerDependencies": {
+    "eslint": ">= 5"
+  },
+  "dependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-html": "^5.0.3",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.3.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.0.2",
+    "prettier": "^1.15.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.10.0"
+  }
+}
