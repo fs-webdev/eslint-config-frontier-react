@@ -1,4 +1,4 @@
 module.exports = {
   plugins:['html'],
-  extends: ['frontier/es6', 'frontier/react', 'plugin:jest/recommended'],
+  extends: ['@fs/eslint-config-frontier-react/es6', '@fs/eslint-config-frontier-react/react', 'plugin:jest/recommended'],
 }
