@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - 10
+deploy:
+  provider: npm
+  email: "dl-fh-eng-frontier@groups.ldschurch.org"
+  api_key: "$NPM_TOKEN"
+  on:
+    branch: master
