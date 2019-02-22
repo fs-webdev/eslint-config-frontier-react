@@ -4,6 +4,6 @@ node_js:
 deploy:
   provider: npm
   email: "dl-fh-eng-frontier@groups.ldschurch.org"
-  api_key: "$NPM_TOKEN"
+  api_key: "$NPM_PUBLISH_TOKEN"
   on:
     branch: master
