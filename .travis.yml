@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - 10
+before_install:
+  - echo "//code.lds.org/artifactory/api/npm/npm-fhd/:_authToken=${NPM_PUBLISH_TOKEN}" >> .npmrc
+  - echo "@fs:registry=https://code.lds.org/artifactory/api/npm/npm-fhd/" >> .npmrc
 deploy:
   provider: npm
   email: "dl-fh-eng-frontier@groups.ldschurch.org"
