@@ -2,16 +2,16 @@ module.exports = {
   plugins: ['react-hooks'],
   extends: ['prettier/react'],
   env: {
-    browser: true
+    browser: true,
   },
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   rules: {
     'react/prop-types': 'off',
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn'
-  }
+    'react-hooks/exhaustive-deps': 'warn',
+  },
 };
