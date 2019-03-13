@@ -23,9 +23,10 @@ module.exports = {
     //override airbnb overbearing rules
     'arrow-parens': [1, 'as-needed'],
     'no-console': 'off',
-    'no-param-reassign': ['warn', { props: false }],
+    'no-param-reassign': 'off',
     'no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
     'no-unused-expressions': ['warn', { allowShortCircuit: true }],
+    'prefer-destructuring': 'off',
 
     'jest/no-large-snapshots': 'error',
   },
