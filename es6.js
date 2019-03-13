@@ -16,7 +16,7 @@ module.exports = {
         printWidth: 100,
         singleQuote: true,
         trailingComma: 'es5',
-        semi: false
+        semi: false,
       },
     ],
 
@@ -26,5 +26,7 @@ module.exports = {
     'no-param-reassign': ['warn', { props: false }],
     'no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
     'no-unused-expressions': ['warn', { allowShortCircuit: true }],
+
+    'jest/no-large-snapshots': 'error',
   },
-};
+}

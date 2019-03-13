@@ -3,4 +3,4 @@
 module.exports = {
   plugins: ['only-warn'],
   extends: ['@fs/eslint-config-frontier-react'],
-};
+}

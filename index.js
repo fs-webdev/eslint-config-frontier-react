@@ -5,4 +5,4 @@ module.exports = {
     '@fs/eslint-config-frontier-react/react',
     'plugin:jest/recommended',
   ],
-};
+}
