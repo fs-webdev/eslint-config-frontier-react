@@ -27,6 +27,7 @@ module.exports = {
     'no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
     'no-unused-expressions': ['warn', { allowShortCircuit: true }],
     'prefer-destructuring': 'off',
+    'no-plusplus': 'off',
 
     'jest/no-large-snapshots': 'error',
   },
