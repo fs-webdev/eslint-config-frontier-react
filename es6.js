@@ -30,5 +30,7 @@ module.exports = {
     'no-plusplus': 'off',
 
     'jest/no-large-snapshots': 'error',
+
+    'import/no-extraneous-dependencies': ['error', {devDependencies: ['**/*.stories.js', '**/*.test.js']}]
   },
 }
