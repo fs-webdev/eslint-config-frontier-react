@@ -31,7 +31,7 @@ module.exports = {
 
     'jest/no-large-snapshots': 'error',
 
-    'import/no-extraneous-dependencies': ['error', {devDependencies: ['**/*.stories.js', '**/*.test.js']}],
+    'import/no-extraneous-dependencies': ['error', {devDependencies: ['**/*.stories.js', '**/*.test.js', '**/demo/**']}],
     "jsx-a11y/label-has-for": 0, // this is deprecated in future versions so disable now
     "jsx-a11y/label-has-associated-control": [ 2, {
       "assert": "either", // fs-styles does not support nesting currently
