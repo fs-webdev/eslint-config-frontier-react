@@ -1,5 +1,5 @@
 module.exports = {
-  plugins: ['html'],
+  plugins: ['html', 'json'],
   extends: [
     '@fs/eslint-config-frontier-react/es6',
     '@fs/eslint-config-frontier-react/react',
