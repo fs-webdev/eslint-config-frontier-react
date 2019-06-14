@@ -4,12 +4,12 @@ const path = require('path')
 const index = require('./index')
 
 // the order of these configs is important and defined by the order of index.js,
-// also, in order for codeclimate to easily opt in to jsdoc, we add it here as well
+// jsdoc is opt-in, and to get that in codeclimate, they'll need to use a prepare statement for the
+// jsdoc.js file as well, we won't do that automatically here
 const configsToCombine = [
   require('./es6'), // eslint-disable-line
   require('./react'), // eslint-disable-line
   require('./jest'), // eslint-disable-line
-  require('./jsdoc'), // eslint-disable-line
 ]
 
 const codeclimateConfig = {
