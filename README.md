@@ -30,7 +30,7 @@ It is important to note that in order for CodeClimate to use this custom config,
       ```yaml
       prepare:
         fetch:
-          - url: 'https://raw.githubusercontent.com/fs-webdev/eslint-config-frontier-react/master/index.js'
+          - url: 'https://raw.githubusercontent.com/fs-webdev/eslint-config-frontier-react/master/codeclimateEslintRules.js'
             path: 'eslint-config-frontier-react.js'
       ```
     - If you also opt into the jsdoc plugin we provide, you'll also need to make a prepare statement for that file.
