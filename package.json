@@ -51,11 +51,12 @@
   "devDependencies": {
     "@fs/npm-publisher": "^1.0.0",
     "eslint": "^5.10.0",
-    "husky": "^2.4.1"
+    "husky": "^2.4.1",
+    "lint-staged": "^8.2.1"
   },
   "husky": {
     "hooks": {
-     "pre-commit": "npm run combineRules"
+      "pre-commit": "npm run combineRules && git add codeclimateEslintRules.js"
     }
   }
 }
