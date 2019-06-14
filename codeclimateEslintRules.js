@@ -12,15 +12,6 @@ module.exports = {
     "plugin:jest/recommended"
   ],
   "rules": {
-    "prettier/prettier": [
-      "warn",
-      {
-        "printWidth": 100,
-        "singleQuote": true,
-        "trailingComma": "es5",
-        "semi": false
-      }
-    ],
     "arrow-parens": [
       1,
       "as-needed"
