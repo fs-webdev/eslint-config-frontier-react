@@ -1,7 +1,6 @@
 module.exports = {
   plugins: ['jsdoc'],
   rules: {
-    'jsdoc/check-alignment': 'warn',
     'jsdoc/check-examples': 'warn',
     'jsdoc/check-indentation': 'off',
     'jsdoc/check-param-names': 'warn',
