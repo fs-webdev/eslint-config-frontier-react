@@ -10,6 +10,16 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'prettier/prettier': [
+      'warn',
+      {
+        printWidth: 100,
+        singleQuote: true,
+        trailingComma: 'es5',
+        semi: false,
+      },
+    ],
+
     // override airbnb overbearing rules
     'arrow-parens': [1, 'as-needed'],
     'no-console': 'off',
