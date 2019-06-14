@@ -1,4 +1,5 @@
-module.exports = {
+// THIS FILE IS AUTO-GENERATED. DO NOT MODIFY THIS FILE BY HAND
+  module.exports = {
   "plugins": [
     "html",
     "json",
