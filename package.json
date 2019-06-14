@@ -50,6 +50,12 @@
   },
   "devDependencies": {
     "@fs/npm-publisher": "^1.0.0",
-    "eslint": "^5.10.0"
+    "eslint": "^5.10.0",
+    "husky": "^2.4.1"
+  },
+  "husky": {
+    "hooks": {
+     "pre-commit": "npm run combineRules"
+    }
   }
 }
