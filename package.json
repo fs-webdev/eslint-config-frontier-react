@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Warning: no test specified\" && exit 0",
     "publish": "npmPublish",
-    "combineRules": "node combineRules.js"
+    "combineRules": "node scripts/combineRules.js"
   },
   "repository": {
     "type": "git",
@@ -51,8 +51,7 @@
   "devDependencies": {
     "@fs/npm-publisher": "^1.0.0",
     "eslint": "^5.10.0",
-    "husky": "^2.4.1",
-    "lint-staged": "^8.2.1"
+    "husky": "^2.4.1"
   },
   "husky": {
     "hooks": {
