@@ -1,11 +1,12 @@
 {
   "name": "@fs/eslint-config-frontier-react",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "A common ESLint configuration setup for frontier apps",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Warning: no test specified\" && exit 0",
-    "publish": "npmPublish"
+    "publish": "npmPublish",
+    "combineRules": "node scripts/combineRules.js"
   },
   "repository": {
     "type": "git",
@@ -15,6 +16,11 @@
     "eslint",
     "eslint-config"
   ],
+  "eslintConfig": {
+    "extends": [
+      "./es6.js"
+    ]
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -44,6 +50,12 @@
   },
   "devDependencies": {
     "@fs/npm-publisher": "^1.0.0",
-    "eslint": "^5.10.0"
+    "eslint": "^5.10.0",
+    "husky": "^2.4.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run combineRules && git add codeclimateEslintRules.js"
+    }
   }
 }
