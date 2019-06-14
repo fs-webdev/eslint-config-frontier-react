@@ -20,7 +20,7 @@ module.exports = {
       },
     ],
 
-    //override airbnb overbearing rules
+    // override airbnb overbearing rules
     'arrow-parens': [1, 'as-needed'],
     'no-console': 'off',
     'no-param-reassign': 'off',
@@ -30,12 +30,17 @@ module.exports = {
     'no-warning-comments': 1,
     'prefer-destructuring': 'off',
 
-    'jest/no-large-snapshots': 'error',
+    'import/no-extraneous-dependencies': [
+      'error',
+      { devDependencies: ['**/*.stories.js', '**/*.test.js', '**/demo/**'] },
+    ],
 
-    'import/no-extraneous-dependencies': ['error', {devDependencies: ['**/*.stories.js', '**/*.test.js', '**/demo/**']}],
-
-    "jsx-a11y/label-has-for": 0, // this is deprecated in future versions so disable now
-    "jsx-a11y/label-has-associated-control": [ 2, { "assert": "either", // fs-styles does not support nesting currently
-    }],
+    'jsx-a11y/label-has-for': 0, // this is deprecated in future versions so disable now
+    'jsx-a11y/label-has-associated-control': [
+      2,
+      {
+        assert: 'either', // fs-styles does not support nesting currently
+      },
+    ],
   },
 }

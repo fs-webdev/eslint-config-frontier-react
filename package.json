@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Warning: no test specified\" && exit 0",
-    "publish": "npmPublish"
+    "publish": "npmPublish",
+    "combineRules": "node combineRules.js"
   },
   "repository": {
     "type": "git",
@@ -15,6 +16,11 @@
     "eslint",
     "eslint-config"
   ],
+  "eslintConfig": {
+    "extends": [
+      "./es6.js"
+    ]
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
