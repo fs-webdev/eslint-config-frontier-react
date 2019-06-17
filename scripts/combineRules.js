@@ -10,7 +10,6 @@ const configsToCombine = [
   require('../es6'), // eslint-disable-line
   require('../react'), // eslint-disable-line
   require('../jest'), // eslint-disable-line
-  require('../jsdoc'), // eslint-disable-line
 ]
 
 const codeclimateConfig = {

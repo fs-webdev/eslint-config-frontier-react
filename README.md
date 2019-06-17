@@ -46,7 +46,7 @@ It is important to note that in order for CodeClimate to use this custom config,
     ```yaml
     plugins:
       eslint:
-        channel: eslint-4
+        channel: eslint-5
         config: # <- This line and the line below it are the important lines to add/tweak
           config: .codeclimate.eslintrc.js # <- this line and the line above it are the important lines to add/tweak
           extensions:
