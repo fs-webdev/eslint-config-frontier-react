@@ -1,6 +1,6 @@
 module.exports = {
   plugins: ['babel'],
-  extends: ['airbnb', 'plugin:prettier/recommended'],
+  extends: ['airbnb'],
   parser: 'babel-eslint',
   env: {
     es6: true,
@@ -10,18 +10,7 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    'prettier/prettier': [
-      'warn',
-      {
-        printWidth: 120,
-        singleQuote: true,
-        trailingComma: 'es5',
-        semi: false,
-      },
-    ],
-
     // override airbnb overbearing rules
-    'arrow-parens': [1, 'as-needed'],
     'no-console': 'off',
     'no-param-reassign': 'off',
     'no-plusplus': 'off',

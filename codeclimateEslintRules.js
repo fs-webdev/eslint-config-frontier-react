@@ -8,24 +8,10 @@
   ],
   "extends": [
     "airbnb",
-    "plugin:prettier/recommended",
     "prettier/react",
     "plugin:jest/recommended"
   ],
   "rules": {
-    "prettier/prettier": [
-      "warn",
-      {
-        "printWidth": 120,
-        "singleQuote": true,
-        "trailingComma": "es5",
-        "semi": false
-      }
-    ],
-    "arrow-parens": [
-      1,
-      "as-needed"
-    ],
     "no-console": "off",
     "no-param-reassign": "off",
     "no-plusplus": "off",
