@@ -9,7 +9,8 @@
   "extends": [
     "airbnb",
     "prettier/react",
-    "plugin:jest/recommended"
+    "plugin:jest/recommended",
+    "plugin:prettier/recommended"
   ],
   "rules": {
     "no-console": "off",
@@ -53,7 +54,17 @@
     "react/require-default-props": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "jest/no-large-snapshots": "error"
+    "jest/no-large-snapshots": "error",
+    "prettier/prettier": [
+      "warn",
+      {
+        "arrowParens": "always",
+        "printWidth": 120,
+        "semi": false,
+        "singleQuote": true,
+        "trailingComma": "es5"
+      }
+    ]
   },
   "env": {
     "es6": true,
