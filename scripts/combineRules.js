@@ -35,7 +35,7 @@ configsToCombine.forEach((config) => {
 })
 
 fs.writeFileSync(
-  path.join(process.cwd(), 'codeclimateEslintRules.js'),
+  path.join(process.cwd(), 'codeclimateEslintRulesv4.js'),
   `// THIS FILE IS AUTO-GENERATED. DO NOT MODIFY THIS FILE BY HAND
   module.exports = ${JSON.stringify(codeclimateConfig, null, 2)}`
 )
