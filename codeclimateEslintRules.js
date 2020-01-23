@@ -13,7 +13,7 @@
     "plugin:prettier/recommended"
   ],
   "rules": {
-    "no-console": "off",
+    "no-console": "warn",
     "no-param-reassign": "off",
     "no-plusplus": "off",
     "no-unused-expressions": [
