@@ -16,7 +16,8 @@
     "no-console": "off",
     "no-param-reassign": "off",
     "no-plusplus": "off",
-    "no-unused-expressions": [
+    "no-unused-expressions": "off",
+    "babel/no-unused-expressions": [
       "warn",
       {
         "allowShortCircuit": true
