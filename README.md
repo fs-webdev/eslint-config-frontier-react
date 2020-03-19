@@ -1,4 +1,4 @@
-# eslint-config-frontier
+# eslint-config-frontier-react
 
 * A common ESLint configuration for frontier apps. The base is airbnb's config (a highly used and tested configuration).
 
@@ -34,6 +34,11 @@ It is important to note that in order for CodeClimate to use this custom config,
             path: 'eslint-config-frontier-react.js'
       ```
     - If you also opt into the jsdoc plugin we provide, you'll also need to make a prepare statement for that file.
+    - WARNING: Starting in version 4 of this repo, there is a different codeclimateEslintRules file for every major version
+    that is released. If you are using or upgrading to v4 of this repo, you'll need to change the fetched url file to 
+    `codeclimateEslintRulesv4.js`. Notice the "v4" at the end of the filename. When v5 is released, you'll also need
+    to change the filename to v5, etc.
+
 2.  Make a new eslintrc file for codeclimate to use (that way it can point to the `eslint-config-frontier-react.js` file that codeclimate will prepare in Step 1.)
 
     1.  Copy your existing local eslintrc file and rename the copy to `.codeclimate.eslintrc.js` (or .json or .yml if you are using those filetypes)
