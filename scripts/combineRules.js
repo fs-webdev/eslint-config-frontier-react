@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 const fs = require('fs')
 const path = require('path')
 
@@ -6,12 +7,7 @@ const index = require('../index')
 // the order of these configs is important and defined by the order of index.js,
 // jsdoc is opt-in, and to get that in codeclimate, they'll need to use a prepare statement for the
 // jsdoc.js file as well, we won't do that automatically here
-const configsToCombine = [
-  require('../es6'), // eslint-disable-line
-  require('../react'), // eslint-disable-line
-  require('../jest'), // eslint-disable-line
-  require('../prettierSetup'), // eslint-disable-line
-]
+const configsToCombine = [require('../es6'), require('../react'), require('../jest'), require('../prettierSetup')]
 
 const codeclimateConfig = {
   plugins: index.plugins,
@@ -35,7 +31,7 @@ configsToCombine.forEach((config) => {
 })
 
 fs.writeFileSync(
-  path.join(process.cwd(), 'codeclimateEslintRulesv4.js'),
+  path.join(process.cwd(), 'codeclimateEslintRulesv5.js'),
   `// THIS FILE IS AUTO-GENERATED. DO NOT MODIFY THIS FILE BY HAND
   module.exports = ${JSON.stringify(codeclimateConfig, null, 2)}`
 )

@@ -1,6 +1,6 @@
 {
   "name": "@fs/eslint-config-frontier-react",
-  "version": "4.0.2",
+  "version": "5.0.0-alpha.0",
   "description": "A common ESLint configuration setup for frontier apps",
   "main": "index.js",
   "scripts": {
@@ -52,6 +52,7 @@
   "devDependencies": {
     "@fs/npm-publisher": "^1.0.0",
     "eslint": "^6.6.0",
+    "eslint-plugin-you-dont-need-lodash-underscore": "^6.10.0",
     "husky": "^3.1.0"
   },
   "husky": {
