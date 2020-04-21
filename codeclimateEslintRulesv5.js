@@ -17,7 +17,8 @@
       "warn",
       {
         "allow": [
-          "error"
+          "error",
+          "trace"
         ]
       }
     ],
