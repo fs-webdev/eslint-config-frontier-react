@@ -18,7 +18,8 @@
       {
         "allow": [
           "error",
-          "trace"
+          "trace",
+          "time"
         ]
       }
     ],
