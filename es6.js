@@ -11,7 +11,7 @@ module.exports = {
   },
   rules: {
     // override airbnb overbearing rules
-    'no-console': ['warn', { allow: ['error', 'trace'] }],
+    'no-console': ['warn', { allow: ['error', 'trace', 'time'] }],
     'no-param-reassign': 'off',
     'no-plusplus': 'off',
     'no-unused-expressions': 'off',
