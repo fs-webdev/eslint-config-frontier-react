@@ -7,9 +7,6 @@ module.exports = {
       files: ['*.ts', '*.tsx'],
       parser: '@typescript-eslint/parser',
       extends: ['plugin:@typescript-eslint/recommended', 'plugin:import/typescript', 'prettier/@typescript-eslint'],
-      settings: {
-        'import/extensions': ['.js', '.ts', '.tsx'],
-      },
     },
   ],
 }

@@ -9,6 +9,9 @@ module.exports = {
     ecmaVersion: 2020,
     sourceType: 'module',
   },
+  settings: {
+    'import/extensions': ['.js', '.ts', '.tsx'],
+  },
   rules: {
     // override airbnb overbearing rules
     'no-console': ['warn', { allow: ['error', 'trace', 'time'] }],
