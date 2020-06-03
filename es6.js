@@ -15,7 +15,7 @@ module.exports = {
     sourceType: 'module',
   },
   settings: {
-    'import/extensions': ['.js', '.ts', '.tsx'],
+    'import/extensions': ['.js', '.json', '.ts', '.tsx'],
   },
   rules: {
     // override airbnb overbearing rules
