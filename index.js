@@ -7,6 +7,7 @@ module.exports = {
     '@fs/eslint-config-frontier-react/test-helpers',
     '@fs/eslint-config-frontier-react/noFixRules',
     '@fs/eslint-config-frontier-react/dont-need-lodash',
+    '@fs/eslint-config-frontier-react/typescript',
     '@fs/eslint-config-frontier-react/prettierSetup',
   ],
 }
