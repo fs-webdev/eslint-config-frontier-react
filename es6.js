@@ -1,6 +1,11 @@
+/*
+ * We use plugin:import/typescript and import/extensions to include ts and tsx files here in es6.js instead
+ * of in typescript.js because otherwise eslint-plugin-import complains about importing .ts or .tsx files
+ * while linting a normal .js file.
+ * */
 module.exports = {
   plugins: ['babel'],
-  extends: ['airbnb'],
+  extends: ['airbnb', 'plugin:import/typescript'],
   parser: 'babel-eslint',
   env: {
     es6: true,
