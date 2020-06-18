@@ -10,7 +10,7 @@ module.exports = {
       rules: {
         '@typescript-eslint/no-use-before-define': 'off',
         '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
-        '@typescript-eslint/no-unused-var': ['error', { argsIgnorePattern: '^_' }],
+        '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
       },
     },
   ],
