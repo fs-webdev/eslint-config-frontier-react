@@ -1,6 +1,6 @@
 {
   "name": "@fs/eslint-config-frontier-react",
-  "version": "7.0.4",
+  "version": "7.0.5",
   "description": "A common ESLint configuration setup for frontier apps",
   "main": "index.js",
   "scripts": {
@@ -33,8 +33,8 @@
     "typescript": ">=3"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^3.1.0",
-    "@typescript-eslint/parser": "^3.8.0",
+    "@typescript-eslint/eslint-plugin": "^4.6.0",
+    "@typescript-eslint/parser": "^4.6.0",
     "babel-eslint": "^10.0.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^6.6.0",
@@ -50,7 +50,7 @@
     "eslint-plugin-only-warn": "^1.0.1",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^3.0.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-testing-library": "^3.1.3",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.10.0",
     "prettier": "^1.15.3"
