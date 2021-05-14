@@ -8,9 +8,15 @@ before_install:
 branches:
   only:
     - master
+    - v7.x
 deploy:
-  provider: script
-  skip_cleanup: true
-  script: npm run publish
-  on:
-    branch: master
+  - provider: script
+    skip_cleanup: true
+    script: npm run publish
+    on:
+      branch: master
+  - provider: script
+    skip_cleanup: true
+    script: npm run publish --allow-earlier-version
+    on:
+      branch: v7.x
