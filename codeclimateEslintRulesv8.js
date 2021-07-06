@@ -2,12 +2,13 @@
   module.exports = {
   "plugins": [
     "html",
+    "json",
+    "babel",
     "react-hooks"
   ],
   "extends": [
     "airbnb",
     "plugin:import/typescript",
-    "prettier/react",
     "plugin:jest/recommended",
     "plugin:prettier/recommended"
   ],
@@ -41,6 +42,7 @@
     ],
     "no-warning-comments": 1,
     "prefer-destructuring": "off",
+    "camelcase": "off",
     "import/no-extraneous-dependencies": [
       "error",
       {
