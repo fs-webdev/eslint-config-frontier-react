@@ -61,7 +61,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run combineRules && git add codeclimateEslintRulesv8.js"
+      "pre-commit": "echo hi && npm run combineRules && git add codeclimateEslintRulesv8.js"
     }
   }
 }
