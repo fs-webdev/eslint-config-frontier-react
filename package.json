@@ -57,7 +57,7 @@
   "devDependencies": {
     "@fs/npm-publisher": "^1.0.13",
     "eslint": "^7.23.0",
-    "husky": "^6.0.0"
+    "husky": "^7.0.0"
   },
   "husky": {
     "hooks": {
