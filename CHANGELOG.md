@@ -1,3 +1,8 @@
+# 8.0.0 - July 6th 2021
+
+Updated to v8 of eslint-config-prettier and made the necessary changes for that.
+
+
 # 8.0.0-alpha.3 - June 23rd 2021
 
 Turning off the camelcase rule. Our convention with Split.io split names combines camelcase and underscores, and the easiest thing to do

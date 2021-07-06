@@ -6,7 +6,7 @@ module.exports = {
     {
       files: ['*.ts', '*.tsx'],
       parser: '@typescript-eslint/parser',
-      extends: ['plugin:@typescript-eslint/recommended', 'prettier/@typescript-eslint'],
+      extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
         '@typescript-eslint/no-use-before-define': 'off',
         '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
