@@ -1,6 +1,6 @@
 {
   "name": "@fs/eslint-config-frontier-react",
-  "version": "8.0.0",
+  "version": "9.0.0",
   "description": "A common ESLint configuration setup for frontier apps",
   "main": "index.js",
   "scripts": {
@@ -61,7 +61,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run combineRules && git add codeclimateEslintRulesv8.js"
+      "pre-commit": "npm run combineRules && git add codeclimateEslintRulesv9.js"
     }
   }
 }
