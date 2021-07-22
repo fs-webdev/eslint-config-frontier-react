@@ -49,7 +49,10 @@
         "devDependencies": [
           "**/*.stories.js",
           "**/*.test.js",
-          "**/demo/**"
+          "**/*.spec.js",
+          "**/demo/**",
+          "**/docs/**",
+          "**/fixtures/**"
         ]
       }
     ],

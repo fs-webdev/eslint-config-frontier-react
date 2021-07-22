@@ -35,9 +35,9 @@ It is important to note that in order for CodeClimate to use this custom config,
       ```
     - If you also opt into the jsdoc plugin we provide, you'll also need to make a prepare statement for that file.
     - WARNING: Starting in version 4 of this repo, there is a different codeclimateEslintRules file for every major version
-    that is released. If you are using or upgrading to v4 of this repo, you'll need to change the fetched url file to 
-    `codeclimateEslintRulesv4.js`. Notice the "v4" at the end of the filename. When v5 is released, you'll also need
-    to change the filename to v5, etc.
+    that is released. If you are using or upgrading to v8 of this repo, you'll need to change the fetched url file to 
+    `codeclimateEslintRulesv8.js`. Notice the "v8" at the end of the filename. When v9 is released, you'll also need
+    to change the filename to v9, etc.
 
 2.  Make a new eslintrc file for codeclimate to use (that way it can point to the `eslint-config-frontier-react.js` file that codeclimate will prepare in Step 1.)
 
