@@ -1,3 +1,7 @@
+# 8.2.0 - Aug 30th 2021
+
+Undo basically all of the dep updates that occurred in 8.0.0
+
 # 8.2.0-alpha.2 - Aug 30th 2021
 
 Trying to get other deps to be in sync with codeclimate's deps for eslint-7
