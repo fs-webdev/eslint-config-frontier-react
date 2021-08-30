@@ -43,6 +43,7 @@
     ],
     "no-warning-comments": 1,
     "prefer-destructuring": "off",
+    "camelcase": "off",
     "import/no-extraneous-dependencies": [
       "error",
       {
