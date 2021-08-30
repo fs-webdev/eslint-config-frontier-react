@@ -9,6 +9,7 @@
   "extends": [
     "airbnb",
     "plugin:import/typescript",
+    "prettier/react",
     "plugin:jest/recommended",
     "plugin:prettier/recommended"
   ],

@@ -1,3 +1,7 @@
+# 8.2.0-alpha.0 - Aug 30th 2021
+
+Adding back prettier/react in the react.js file to see if it makes codeclimate happy with local linting
+
 # 8.0.0 - July 6th 2021
 
 Updated to v8 of eslint-config-prettier and made the necessary changes for that.
