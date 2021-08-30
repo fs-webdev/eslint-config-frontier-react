@@ -1,3 +1,7 @@
+# 8.2.0-alpha.2 - Aug 30th 2021
+
+Trying to get other deps to be in sync with codeclimate's deps for eslint-7
+
 # 8.2.0-alpha.1 - Aug 30th 2021
 
 Downgrading eslint-config-prettier to v6, since codeclimate is still stuck on v6. Now there shouldn't be a discrepency
