@@ -1,6 +1,6 @@
 {
   "name": "@fs/eslint-config-frontier-react",
-  "version": "8.2.0-alpha.0",
+  "version": "8.2.0-alpha.1",
   "description": "A common ESLint configuration setup for frontier apps",
   "main": "index.js",
   "scripts": {
@@ -37,7 +37,7 @@
     "@typescript-eslint/parser": "^4.6.0",
     "babel-eslint": "^10.0.1",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-import": "2.22.1",

@@ -1,3 +1,8 @@
+# 8.2.0-alpha.1 - Aug 30th 2021
+
+Downgrading eslint-config-prettier to v6, since codeclimate is still stuck on v6. Now there shouldn't be a discrepency
+between codeclimate and local linting
+
 # 8.2.0-alpha.0 - Aug 30th 2021
 
 Adding back prettier/react in the react.js file to see if it makes codeclimate happy with local linting
