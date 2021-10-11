@@ -1,6 +1,6 @@
 {
   "name": "@fs/eslint-config-frontier-react",
-  "version": "8.2.0",
+  "version": "8.3.0-beta.0",
   "description": "A common ESLint configuration setup for frontier apps",
   "main": "index.js",
   "scripts": {
@@ -33,6 +33,7 @@
     "typescript": ">=3"
   },
   "dependencies": {
+    "@fs/eslint-plugin-zion": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "^4.6.0",
     "@typescript-eslint/parser": "^4.6.0",
     "babel-eslint": "^10.0.1",
