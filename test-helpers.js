@@ -4,4 +4,8 @@
  */
 module.exports = {
   extends: ['plugin:jest-dom/recommended', 'plugin:testing-library/react'],
+  plugin: ['@fs/zion'],
+  rules: {
+    '@fs/zion/prefer-zion-render': 'error',
+  },
 }

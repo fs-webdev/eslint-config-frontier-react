@@ -1,3 +1,7 @@
+# 8.3.0 - Aug 30th 2021
+
+Utilize the new preferZionRender rule from @fs/eslint-plugin-zion
+
 # 8.2.0 - Aug 30th 2021
 
 Undo basically all of the dep updates that occurred in 8.0.0
