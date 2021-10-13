@@ -1,3 +1,7 @@
+# 9.0.0 - Oct 13th 2021
+
+TURN BACK ON the new preferZionRender rule from @fs/eslint-plugin-zion because it is a breaking change, should be in 9.0.0
+
 # 8.4.0 - Oct 13th 2021
 
 TURN OFF the new preferZionRender rule from @fs/eslint-plugin-zion because it is a breaking change, should be in 9.0.0
