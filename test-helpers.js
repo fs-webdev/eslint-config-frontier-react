@@ -6,6 +6,6 @@ module.exports = {
   extends: ['plugin:jest-dom/recommended', 'plugin:testing-library/react'],
   plugins: ['@fs/zion'],
   rules: {
-    '@fs/zion/prefer-zion-render': 'error',
+    '@fs/zion/prefer-zion-render': 'off',
   },
 }
