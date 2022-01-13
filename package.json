@@ -37,14 +37,14 @@
     "@typescript-eslint/eslint-plugin": "^4.6.0",
     "@typescript-eslint/parser": "^4.6.0",
     "babel-eslint": "^10.0.1",
-    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^6.6.0",
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jest": "^23.0.4",
     "eslint-plugin-jest-dom": "^2.1.0",
-    "eslint-plugin-jsdoc": "^18.0.1",
+    "eslint-plugin-jsdoc": "^37.6.1",
     "eslint-plugin-json": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-no-autofix": "0.0.3",
@@ -57,8 +57,9 @@
   },
   "devDependencies": {
     "@fs/npm-publisher": "^1.0.13",
-    "eslint": "^6.6.0",
-    "husky": "^4.2.5"
+    "eslint": "^7.32.0",
+    "husky": "^4.2.5",
+    "typescript": "^4.5.4"
   },
   "husky": {
     "hooks": {
