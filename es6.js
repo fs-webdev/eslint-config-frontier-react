@@ -31,7 +31,16 @@ module.exports = {
 
     'import/no-extraneous-dependencies': [
       'error',
-      { devDependencies: ['**/*.stories.js', '**/*.test.js', '**/*.spec.js', '**/demo/**', '**/docs/**', '**/fixtures/**'] },
+      {
+        devDependencies: [
+          '**/*.stories.js',
+          '**/*.test.js',
+          '**/*.spec.js',
+          '**/demo/**',
+          '**/docs/**',
+          '**/fixtures/**',
+        ],
+      },
     ],
 
     'jsx-a11y/label-has-for': 0, // this is deprecated in future versions so disable now

@@ -1,3 +1,8 @@
+# 10.0.0 - Jul 7th 2022
+
+Remove eslint from devDependencies, and lower the peerDep of eslint so it works with airbnb 17.1.0. 
+and we need to be on airbnb 17.1.0 because of codeclimate constraints
+
 # 9.0.0 - Oct 13th 2021
 
 TURN BACK ON the new preferZionRender rule from @fs/eslint-plugin-zion because it is a breaking change, should be in 9.0.0
