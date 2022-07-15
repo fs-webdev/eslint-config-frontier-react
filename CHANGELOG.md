@@ -1,4 +1,8 @@
-# 10.0.0 - Jul 7th 2022
+# 10.0.0-alpha.1 - Jul 15th 2022
+- turn of no-autofix since it breaks cra 5
+
+
+# 10.0.0-alpha.0 - Jul 7th 2022
 
 Remove eslint from devDependencies, and lower the peerDep of eslint so it works with airbnb 17.1.0. 
 and we need to be on airbnb 17.1.0 because of codeclimate constraints
