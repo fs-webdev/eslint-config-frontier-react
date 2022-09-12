@@ -7,5 +7,6 @@ module.exports = {
   plugins: ['@fs/zion'],
   rules: {
     '@fs/zion/prefer-zion-render': 'off',
+    'testing-library/no-debugging-utils': 'off',
   },
 }

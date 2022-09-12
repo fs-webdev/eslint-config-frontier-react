@@ -1,6 +1,12 @@
-# 10.0.0-alpha.1 - Jul 15th 2022
-- turn of no-autofix since it breaks cra 5
+# 10.0.0-alpha.2 - Setp 12 2022
 
+- enable node 16 "everywhere" in repo
+- ignore certain properties in "react/no-unknown-property" rule
+- turn off testing-library/no-debugging-utils
+
+# 10.0.0-alpha.1 - Jul 15th 2022
+
+- turn of no-autofix since it breaks cra 5
 
 # 10.0.0-alpha.0 - Jul 7th 2022
 
