@@ -30,14 +30,14 @@ It is important to note that in order for CodeClimate to use this custom config,
       ```yaml
       prepare:
         fetch:
-          - url: 'https://raw.githubusercontent.com/fs-webdev/eslint-config-frontier-react/master/codeclimateEslintRules.js'
+          - url: 'https://raw.githubusercontent.com/fs-webdev/eslint-config-frontier-react/master/codeclimateEslintRulesv10.js'
             path: 'eslint-config-frontier-react.js'
       ```
     - If you also opt into the jsdoc plugin we provide, you'll also need to make a prepare statement for that file.
     - WARNING: Starting in version 4 of this repo, there is a different codeclimateEslintRules file for every major version
     that is released. If you are using or upgrading to v8 of this repo, you'll need to change the fetched url file to 
-    `codeclimateEslintRulesv8.js`. Notice the "v8" at the end of the filename. When v9 is released, you'll also need
-    to change the filename to v9, etc.
+    `codeclimateEslintRulesv10.js`. Notice the "v10" at the end of the filename. When v11 is released, you'll also need
+    to change the filename to v11, etc.
 
 2.  Make a new eslintrc file for codeclimate to use (that way it can point to the `eslint-config-frontier-react.js` file that codeclimate will prepare in Step 1.)
 
