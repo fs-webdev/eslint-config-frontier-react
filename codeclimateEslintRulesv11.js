@@ -6,24 +6,18 @@
 module.exports = {
   plugins: ['babel', 'json', 'html', 'react-hooks'],
   extends: ['airbnb', 'plugin:import/typescript', 'prettier/react', 'plugin:prettier/recommended'],
-  env: {
-    es6: true,
-    browser: true,
-  },
+  env: { es6: true, browser: true },
   parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
     requireConfigFile: false,
     ecmaFeatures: { jsx: true },
-    babelOptions: {
-      presets: ['@babel/preset-react'],
-    },
+    babelOptions: { presets: ['@babel/preset-react'] },
   },
   rules: {
     'no-shadow': 'off',
     'react/react-in-jsx-scope': 'off',
-
     'no-console': ['warn', { allow: ['error', 'trace', 'time'] }],
     'no-param-reassign': 'off',
     'no-plusplus': 'off',
@@ -31,10 +25,8 @@ module.exports = {
     'no-warning-comments': ['warn', { terms: ['FIXME', 'TODO', 'HACK'], location: 'anywhere' }],
     'prefer-destructuring': 'off',
     camelcase: 'off',
-
     'no-unused-expressions': 'off',
     'babel/no-unused-expressions': ['warn', { allowShortCircuit: true }],
-
     'import/no-extraneous-dependencies': [
       'error',
       {
@@ -66,9 +58,7 @@ module.exports = {
     {
       files: ['*.ts?(x)'],
       parser: '@typescript-eslint/parser',
-      parserOptions: {
-        warnOnUnsupportedTypeScriptVersion: false,
-      },
+      parserOptions: { warnOnUnsupportedTypeScriptVersion: false },
       extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
       rules: {
         'no-undef': 'off',
@@ -76,7 +66,6 @@ module.exports = {
         'no-shadow': 'off',
         'no-use-before-define': 'off',
         'import/extensions': 'off',
-
         '@typescript-eslint/no-use-before-define': ['error', { functions: false }],
         '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
         '@typescript-eslint/no-var-requires': 'off',
@@ -84,11 +73,6 @@ module.exports = {
         '@typescript-eslint/consistent-type-imports': 'error',
       },
     },
-    {
-      files: ['*.test.ts?(x)'],
-      rules: {
-        '@typescript-eslint/no-non-null-assertion': 'off',
-      },
-    },
+    { files: ['*.test.ts?(x)'], rules: { '@typescript-eslint/no-non-null-assertion': 'off' } },
   ],
 }
