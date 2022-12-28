@@ -4,50 +4,42 @@
  * while linting a normal .js file.
  * */
 module.exports = {
-  plugins: ['babel'],
-  extends: ['airbnb', 'plugin:import/typescript'],
-  parser: 'babel-eslint',
+  plugins: ['@babel', 'json', 'html'],
+  extends: ['airbnb-base', 'plugin:import/typescript'],
   env: {
-    es6: true,
+    es2021: true,
   },
+  parser: '@babel/eslint-parser',
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 'latest',
     sourceType: 'module',
-  },
-  settings: {
-    'import/extensions': ['.js', '.json', '.ts', '.tsx'],
+    requireConfigFile: false,
   },
   rules: {
-    // override airbnb overbearing rules
     'no-console': ['warn', { allow: ['error', 'trace', 'time'] }],
     'no-param-reassign': 'off',
     'no-plusplus': 'off',
-    'no-unused-expressions': 'off',
-    'babel/no-unused-expressions': ['warn', { allowShortCircuit: true }],
     'no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
-    'no-warning-comments': 1,
+    'no-warning-comments': ['warn', { terms: ['FIXME', 'TODO', 'HACK'], location: 'anywhere' }],
     'prefer-destructuring': 'off',
     camelcase: 'off',
 
+    'no-unused-expressions': 'off', // Disable for better @babel version
+    '@babel/no-unused-expressions': ['warn', { allowShortCircuit: true }],
+
+    'import/extensions': ['error', 'ignorePackages', { js: 'never', jsx: 'never', ts: 'never', tsx: 'never' }],
     'import/no-extraneous-dependencies': [
       'error',
       {
         devDependencies: [
-          '**/*.stories.js',
-          '**/*.test.js',
-          '**/*.spec.js',
+          '**/setupTests.[tj]s?(x)',
+          '**/*.stories.[tj]s?(x)',
+          '**/*.test.[tj]s?(x)',
+          '**/*.spec.[tj]s?(x)',
           '**/demo/**',
           '**/docs/**',
           '**/fixtures/**',
         ],
-      },
-    ],
-
-    'jsx-a11y/label-has-for': 0, // this is deprecated in future versions so disable now
-    'jsx-a11y/label-has-associated-control': [
-      2,
-      {
-        assert: 'either', // fs-styles does not support nesting currently
       },
     ],
   },
