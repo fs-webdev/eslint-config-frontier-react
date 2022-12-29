@@ -8,6 +8,7 @@ We have an eslint configuration setup for react projects. We HIGHLY recommend yo
 
 1. Run `npm install @fs/eslint-config-frontier-react --save-dev`
 2. Add `"extends": ["@fs/eslint-config-frontier-react"]` to your eslint config.
+3. If you use TypeScript add your tsconfig to your parserOptions like so `"overrides": [ { "files": ["*.ts?(x)"], "parserOptions": { "project": "./tsconfig.json" } } ]`
 
 ### Opt in for linting jsdoc rules
 
@@ -15,12 +16,9 @@ We have a configuration for jsdoc rules that you can use if your team decides th
 
 1. Add a new entry to the `extends` field of your eslint config.
 
-   ```json
-   "extends": [
-     "@fs/eslint-config-frontier-react",
-     "@fs/eslint-config-frontier-react/jsdoc"
-   ],
-   ```
+```json
+"extends": [ "@fs/eslint-config-frontier-react", "@fs/eslint-config-frontier-react/jsdoc" ],
+```
 
 ## CodeClimate Usage
 
