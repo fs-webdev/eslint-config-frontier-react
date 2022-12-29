@@ -16,6 +16,5 @@ module.exports = {
     'react/no-unknown-property': ['error', { ignore: ['css', 'columns'] }],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    // 'react/jsx-newline': 'off',
   },
 }
