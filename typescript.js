@@ -11,21 +11,18 @@ module.exports = {
       },
       extends: ['plugin:@typescript-eslint/recommended', 'prettier'], // Always have prettier last so it can override format rules in the extends before it
       rules: {
+        'no-use-before-define': 'off', // @typescript-eslint/no-use-before-defined requires this to be off
         '@typescript-eslint/no-use-before-define': ['error', { functions: false }],
-        '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
 
         'no-unused-vars': 'off', // @typescript-eslint/no-unused-vars requires this to be off
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
 
-        '@typescript-eslint/no-var-requires': 'off',
+        'no-empty-functions': 'off', // @typescript-eslint/no-empty-function requires this to be off
         '@typescript-eslint/no-empty-function': ['error', { allow: ['arrowFunctions'] }],
+
         '@typescript-eslint/consistent-type-imports': 'error',
 
-        'no-shadow': 'off',
-        'no-use-before-define': 'off',
-
-        // TS complains about using the .ts/.tsx extensions in the import statement. so turning this rule off for TS
-        'import/extensions': 'off',
+        '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
       },
     },
     {

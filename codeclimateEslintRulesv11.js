@@ -16,8 +16,6 @@ module.exports = {
     babelOptions: { presets: ['@babel/preset-react'] },
   },
   rules: {
-    'no-shadow': 'off',
-    'react/react-in-jsx-scope': 'off',
     'no-console': ['warn', { allow: ['error', 'trace', 'time'] }],
     'no-param-reassign': 'off',
     'no-plusplus': 'off',
@@ -61,18 +59,26 @@ module.exports = {
       parserOptions: { warnOnUnsupportedTypeScriptVersion: false },
       extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
       rules: {
-        'no-undef': 'off',
-        'no-unused-vars': 'off',
-        'no-shadow': 'off',
         'no-use-before-define': 'off',
-        'import/extensions': 'off',
         '@typescript-eslint/no-use-before-define': ['error', { functions: false }],
-        '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
-        '@typescript-eslint/no-var-requires': 'off',
-        '@typescript-eslint/no-empty-function': ['error', { allow: ['arrowFunctions'] }],
+
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+
+        'no-empty-functions': 'off',
+        '@typescript-eslint/no-empty-function': 'error',
+
         '@typescript-eslint/consistent-type-imports': 'error',
+
+        '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
       },
     },
-    { files: ['*.test.ts?(x)'], rules: { '@typescript-eslint/no-non-null-assertion': 'off' } },
+    {
+      files: ['*.test.ts?(x)'],
+      rules: {
+        '@typescript-eslint/no-non-null-assertion': 'off',
+        '@typescript-eslint/no-empty-function': ['error', { allow: ['arrowFunctions'] }],
+      },
+    },
   ],
 }
