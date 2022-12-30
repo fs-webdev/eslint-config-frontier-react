@@ -66,7 +66,7 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
 
         'no-empty-functions': 'off',
-        '@typescript-eslint/no-empty-function': 'error',
+        '@typescript-eslint/no-empty-function': ['error', { allow: ['arrowFunctions'] }],
 
         '@typescript-eslint/consistent-type-imports': 'error',
 
@@ -77,7 +77,6 @@ module.exports = {
       files: ['*.test.ts?(x)'],
       rules: {
         '@typescript-eslint/no-non-null-assertion': 'off',
-        '@typescript-eslint/no-empty-function': ['error', { allow: ['arrowFunctions'] }],
       },
     },
   ],
