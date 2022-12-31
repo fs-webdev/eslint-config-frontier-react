@@ -2,6 +2,7 @@ module.exports = {
   extends: [
     './react',
     './es6',
+    './json',
     './typescript',
     './jest',
     // './noFixRules',

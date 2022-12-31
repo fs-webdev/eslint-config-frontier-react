@@ -4,7 +4,7 @@
  * while linting a normal .js file.
  * */
 module.exports = {
-  plugins: ['@babel', 'json', 'html'],
+  plugins: ['@babel', 'html'],
   extends: ['airbnb-base', 'plugin:import/typescript'],
   env: {
     es2021: true,
