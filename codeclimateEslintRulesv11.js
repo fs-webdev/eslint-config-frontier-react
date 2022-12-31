@@ -1,11 +1,17 @@
 // These are used within these deps https://github.com/codeclimate/codeclimate-eslint/blob/channel/eslint-8/package.json for channel: 'eslint-8'
 
-// jest linting not enabled for CodeClimate because it is behind; don't CodeClimate-lint test files nor the setupTests file
-// jsdoc linting not enabled for CodeClimate because it is optional.
-
 module.exports = {
+  settings: { jest: { version: 29 } }, // Allow test files to be tested
   plugins: ['babel', 'json', 'html', 'react-hooks'],
-  extends: ['airbnb', 'plugin:import/typescript', 'prettier/react', 'plugin:prettier/recommended'],
+  extends: [
+    'airbnb',
+    'plugin:import/typescript',
+    'plugin:jest/recommended',
+    'plugin:jest-dom/recommended',
+    'plugin:testing-library/react',
+    'prettier/react',
+    'plugin:prettier/recommended',
+  ],
   env: { es6: true, browser: true },
   parser: '@babel/eslint-parser',
   parserOptions: {
@@ -39,10 +45,8 @@ module.exports = {
         ],
       },
     ],
-
     'jsx-a11y/label-has-for': 'off',
     'jsx-a11y/label-has-associated-control': ['error', { assert: 'either' }],
-
     'react/prop-types': 'off',
     'react/jsx-filename-extension': 'off',
     'react/require-default-props': 'off',
@@ -51,6 +55,8 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'prettier/prettier': ['warn', { arrowParens: 'always', printWidth: 120, semi: false, singleQuote: true }],
+    'jest/no-large-snapshots': 'error',
+    'testing-library/no-debugging-utils': 'off',
   },
   overrides: [
     {
@@ -61,15 +67,11 @@ module.exports = {
       rules: {
         'no-use-before-define': 'off',
         '@typescript-eslint/no-use-before-define': ['error', { functions: false }],
-
         'no-unused-vars': 'off',
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-
         'no-empty-functions': 'off',
         '@typescript-eslint/no-empty-function': ['error', { allow: ['arrowFunctions'] }],
-
         '@typescript-eslint/consistent-type-imports': 'error',
-
         '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
       },
     },
@@ -77,7 +79,10 @@ module.exports = {
       files: ['*.test.ts?(x)'],
       rules: {
         '@typescript-eslint/no-non-null-assertion': 'off',
+        'testing-library/no-node-access': 'off',
+        'jest/expect-expect': ['warn', { assertFunctionNames: ['expect', '*expect*'] }],
       },
     },
+    { files: ['**/mocks/*.[tj]s?(x)'], rules: { 'import/prefer-default-export': 'off' } },
   ],
 }

@@ -61,12 +61,3 @@ CodeClimate uses its own dependencies, so its rules are a bit behind.
               - .html
           enabled: true
      ```
-
-4. Don't CodeClimate-lint your test files
-
-```yaml
-exclude_patterns:
-  - '**/setupTests.*'
-  - '**/*.test.*'
-  - '**/*.spec.*'
-```
