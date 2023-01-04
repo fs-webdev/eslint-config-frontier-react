@@ -19,7 +19,7 @@ module.exports = {
     sourceType: 'module',
     requireConfigFile: false,
     ecmaFeatures: { jsx: true },
-    babelOptions: { presets: ['@babel/preset-react'] },
+    babelOptions: { babelrc: false, configFile: false, presets: ['@babel/preset-react'] },
   },
   rules: {
     'no-console': ['warn', { allow: ['error', 'trace', 'time'] }],
