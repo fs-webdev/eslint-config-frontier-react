@@ -50,7 +50,6 @@ module.exports = {
     'react/prop-types': 'off',
     'react/jsx-filename-extension': 'off',
     'react/require-default-props': 'off',
-    'react/jsx-no-bind': 'warn',
     'react/no-unknown-property': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',

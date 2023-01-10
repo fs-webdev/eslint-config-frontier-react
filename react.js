@@ -16,7 +16,6 @@ module.exports = {
     'react/prop-types': 'off',
     'react/jsx-filename-extension': 'off',
     'react/require-default-props': 'off',
-    'react/jsx-no-bind': 'warn', // See https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md#react-hooks
     'react/no-unknown-property': 'off', // Allows custom properties to be used for css (is-desktop, etc) and for parents (columns, growX, etc)
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
