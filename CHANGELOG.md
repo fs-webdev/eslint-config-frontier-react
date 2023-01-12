@@ -1,4 +1,8 @@
-# 10.0.0-alpha.2 - Setp 12 2022
+# 10.0.0 - Jan 11 2023
+
+- Just get off alpha since things are working as expected
+
+# 10.0.0-alpha.2 - Sep 12 2022
 
 - enable node 16 "everywhere" in repo
 - ignore certain properties in "react/no-unknown-property" rule
