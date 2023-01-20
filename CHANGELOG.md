@@ -1,3 +1,8 @@
+
+# 11.0.0-alpha.1 - Jan 20 2023
+
+- Remove 'prettier' from end of each extends from individual configs
+
 # 11.0.0-alpha.0 - Jan 20 2023
 
 - Remove codeclimate limitations, update deps

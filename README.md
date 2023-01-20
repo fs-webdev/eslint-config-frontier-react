@@ -9,19 +9,40 @@ We have an eslint configuration setup for react projects. We HIGHLY recommend yo
 1.  Run `npm install @fs/eslint-config-frontier-react --save-dev`
 2.  Add `"extends": ["@fs/eslint-config-frontier-react"]` to your eslint config.
 
-### Opt in for linting jsdoc rules
+### Opt in for only specific configurations
+
+You may want to only use a subset of the configurations here in this eslint repo
+
+#### If your repo doesn't use react
+
+This is how you can use just the es6 rules and prettier and not have to worry about react rules in a non-react repo
+
+```json
+"extends": [
+  "@fs/eslint-config-frontier-react/es6",
+  "@fs/eslint-config-frontier-react/prettierSetup"
+],
+```
+
+#### Adding jsdoc rules
 
 We have a configuration for jsdoc rules that you can use if your team decides they want to be more consistent with jsdocs
+It doesn't come out of the box with @fs/eslint-config-frontier-react, so you'll need to add it explicitly
 
 1. Add a new entry to the `extends` field of your eslint config.
-    ```
-    "extends": [
-      "@fs/eslint-config-frontier-react",
-      "@fs/eslint-config-frontier-react/jsdoc"
-    ],
-    ```
 
-## CodeClimate Usage
+```json
+"extends": [
+  "@fs/eslint-config-frontier-react",
+  "@fs/eslint-config-frontier-react/jsdoc"
+],
+```
+
+## CodeClimate Usage (DEPRECATED)
+
+### As of v11 of this repository, we no longer keep codeclimate compatability. [ See this Architectural Decision why. ]( https://www.familysearch.org/frontier/docs/architectural-decisions/020-eslint-codeclimate-compatability )
+
+### For People using v10 and before and still want eslint in codeclimate we left the following instructions
 
 It is important to note that in order for CodeClimate to use this custom config, we have to work around their limitations a bit.
 

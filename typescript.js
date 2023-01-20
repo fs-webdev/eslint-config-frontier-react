@@ -7,7 +7,7 @@ module.exports = {
       files: ['*.ts?(x)'],
       parser: '@typescript-eslint/parser',
       parserOptions: { warnOnUnsupportedTypeScriptVersion: false },
-      extends: ['plugin:@typescript-eslint/recommended', 'prettier'], // Always have prettier last so it can override format rules in the extends before it
+      extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
         'no-use-before-define': 'off', // Turning off because we have the TS version off
         '@typescript-eslint/no-use-before-define': 'off',

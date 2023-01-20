@@ -1,6 +1,6 @@
 module.exports = {
   plugins: ['react-hooks'],
-  extends: ['airbnb', 'prettier'], // Always have prettier last so it can override format rules in the extends before it'prettier'],
+  extends: ['airbnb'],
   env: {
     browser: true,
   },
