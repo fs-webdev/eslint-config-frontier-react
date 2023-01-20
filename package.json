@@ -1,6 +1,6 @@
 {
   "name": "@fs/eslint-config-frontier-react",
-  "version": "11.0.0-alpha.1",
+  "version": "11.0.0-alpha.2",
   "description": "A common ESLint configuration setup for frontier apps",
   "main": "index.js",
   "engines": {
@@ -31,8 +31,7 @@
   },
   "homepage": "https://github.com/fs-webdev/eslint-config-frontier-react#readme",
   "peerDependencies": {
-    "eslint": "^7.32.0 || ^8.2.0",
-    "typescript": ">=3.0.0"
+    "eslint": "^7.32.0 || ^8.2.0"
   },
   "dependencies": {
     "@babel/core": "^7.20.7",

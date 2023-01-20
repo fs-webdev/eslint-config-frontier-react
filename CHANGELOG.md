@@ -1,4 +1,10 @@
 
+# 11.0.0-alpha.2 - Jan 20 2023
+
+- Don't include typescript lint rules by default. Apps need to opt in
+- Update readme to show how to opt into typescript
+- Remove peerDep on typescript since that isn't technically true all the time
+
 # 11.0.0-alpha.1 - Jan 20 2023
 
 - Remove 'prettier' from end of each extends from individual configs

@@ -9,7 +9,7 @@ We have an eslint configuration setup for react projects. We HIGHLY recommend yo
 1.  Run `npm install @fs/eslint-config-frontier-react --save-dev`
 2.  Add `"extends": ["@fs/eslint-config-frontier-react"]` to your eslint config.
 
-### Opt in for only specific configurations
+### Opt in for only specific/additional configurations
 
 You may want to only use a subset of the configurations here in this eslint repo
 
@@ -24,7 +24,21 @@ This is how you can use just the es6 rules and prettier and not have to worry ab
 ],
 ```
 
-#### Adding jsdoc rules
+#### Adding typescript eslint rules
+
+We have a configuration for typescript rules that you can use if your repo uses typescript.
+It doesn't come out of the box with @fs/eslint-config-frontier-react, so you'll need to add it explicitly.
+Also, it requires that `typescript >=3` be installed in your repo as well.
+
+```json
+"extends": [
+  "@fs/eslint-config-frontier-react",
+  "@fs/eslint-config-frontier-react/typescript"
+],
+```
+
+
+#### Adding jsdoc eslint rules
 
 We have a configuration for jsdoc rules that you can use if your team decides they want to be more consistent with jsdocs
 It doesn't come out of the box with @fs/eslint-config-frontier-react, so you'll need to add it explicitly
