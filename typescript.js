@@ -4,12 +4,16 @@ module.exports = {
    * */
   overrides: [
     {
-      files: ['*.ts', '*.tsx'],
+      files: ['*.ts?(x)'],
       parser: '@typescript-eslint/parser',
-      extends: ['plugin:@typescript-eslint/recommended', 'prettier/@typescript-eslint'],
+      parserOptions: { warnOnUnsupportedTypeScriptVersion: false },
+      extends: ['plugin:@typescript-eslint/recommended', 'prettier'], // Always have prettier last so it can override format rules in the extends before it
       rules: {
+        'no-use-before-define': 'off', // Turning off because we have the TS version off
         '@typescript-eslint/no-use-before-define': 'off',
         '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
+
+        'no-unused-vars': 'off', // @typescript-eslint/no-unused-vars requires this to be off
         '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
 
         // TS complains about using the .ts/.tsx extensions in the import statement. so turning this rule off for TS
