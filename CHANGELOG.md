@@ -1,4 +1,9 @@
 
+# 11.0.0-alpha.3 - Jan 20 2023
+
+- Allow node 14+ in engines so repos stuck on 14 don't get a warning about it
+- Explicitly add eslint-plugin-jsx-a11y dep since it is a peerDep in airbnb 
+
 # 11.0.0-alpha.2 - Jan 20 2023
 
 - Don't include typescript lint rules by default. Apps need to opt in
