@@ -1,3 +1,7 @@
+# 11.0.0-alpha.0 - Jan 20 2023
+
+- Remove codeclimate limitations, update deps
+
 # 10.0.0 - Jan 11 2023
 
 - Just get off alpha since things are working as expected
