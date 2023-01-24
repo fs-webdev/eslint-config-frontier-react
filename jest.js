@@ -11,6 +11,7 @@ module.exports = {
       files: ['*.test.[tj]s?(x)'],
       rules: {
         'testing-library/no-node-access': 'off', // TODO this rule was enabled for new testing-library
+        'jest/expect-expect': ['warn', { assertFunctionNames: ['expect', '*expect*'] }],
       },
     },
   ],
