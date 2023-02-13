@@ -16,7 +16,7 @@ module.exports = {
     'react/prop-types': 'off',
     'react/jsx-filename-extension': 'off',
     'react/require-default-props': 'off',
-    'react/no-unknown-property': ['error', { ignore: ['css', 'columns'] }],
+    'react/no-unknown-property': 'off', // Allows custom properties to be used for css (is-desktop, etc) and for parents (columns, growX, etc)
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     'react/function-component-definition': 'off', // TODO look into this more

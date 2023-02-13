@@ -9,15 +9,18 @@ module.exports = {
       parserOptions: { warnOnUnsupportedTypeScriptVersion: false },
       extends: ['plugin:@typescript-eslint/recommended'],
       rules: {
-        'no-use-before-define': 'off', // Turning off because we have the TS version off
-        '@typescript-eslint/no-use-before-define': 'off',
-        '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
-
+        'no-use-before-define': 'off', // @typescript-eslint/no-use-before-defined requires this to be off
+        '@typescript-eslint/no-use-before-define': ['error', { functions: false }],
         'no-unused-vars': 'off', // @typescript-eslint/no-unused-vars requires this to be off
-        '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-
-        // TS complains about using the .ts/.tsx extensions in the import statement. so turning this rule off for TS
-        'import/extensions': 'off',
+        'no-empty-functions': 'off', // @typescript-eslint/no-empty-function requires this to be off
+        '@typescript-eslint/consistent-type-imports': 'error',
+        '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
+      },
+    },
+    {
+      files: ['*.test.ts?(x)'],
+      rules: {
+        '@typescript-eslint/no-non-null-assertion': 'off', // We can know for sure if something is null or not for tests because we made the mock data
       },
     },
   ],
