@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 11.0.0-alpha.5 - Feb 27 2023
+
+- Typescript rules update:
+  - All the rules from @typescript-eslint/recommended already turn off the overriden rules, so no-unused-vars and no-empty-functions do not need to be explicitly turned off in our config
+  - Added @typescript-eslint/no-shadow because we have the normal rule for JS files as error.
+
 ## 11.0.0-alpha.4 - Jan 24 2023
 
 - Don't turn import/extensions off for TS files
