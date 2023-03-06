@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.0.0-alpha.6 - Mar 1 2023
+
+- Disable no-restricted-exports because we need to be able to export default
+
 ## 11.0.0-alpha.5 - Feb 27 2023
 
 - Typescript rules update:

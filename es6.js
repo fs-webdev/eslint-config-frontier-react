@@ -16,6 +16,7 @@ module.exports = {
     requireConfigFile: false,
   },
   rules: {
+    'no-restricted-exports': 'off', // We need to be able to export default
     'no-console': ['warn', { allow: ['error', 'trace', 'time'] }],
     'no-param-reassign': 'off',
     'no-plusplus': 'off',
