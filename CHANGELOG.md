@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 11.0.0-alpha.7 - Mar 7 2023
+
+- Update JSDoc rules
+- Update JSON plugin to be used for json files. This also make the default linting experience actually lint json files without specifying any extensions. See <https://eslint.org/docs/latest/use/command-line-interface#--ext>.
+
 ## 11.0.0-alpha.6 - Mar 1 2023
 
 - Disable no-restricted-exports because we need to be able to export default
