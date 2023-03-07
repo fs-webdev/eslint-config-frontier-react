@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['plugin:json/recommended-with-comments'],
+  overrides: [{ files: ['*.json'], extends: ['plugin:json/recommended-with-comments'] }],
 }
