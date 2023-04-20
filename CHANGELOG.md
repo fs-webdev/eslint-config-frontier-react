@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.0.0 - 2023-04-20
+
+- Include cypress config
+
 ## 11.0.0-alpha.7 - Mar 7 2023
 
 - Update JSDoc rules
