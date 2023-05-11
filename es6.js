@@ -32,13 +32,15 @@ module.exports = {
       {
         devDependencies: [
           '**/setupTests.[tj]s?(x)',
-          '**/*.stories.[tj]s?(x)',
-          '**/*.test.[tj]s?(x)',
-          '**/*.spec.[tj]s?(x)',
+          '**/*.{cy,spec,stories,test}.[tj]s?(x)',
+          '.storybook/**',
           '**/demo/**',
           '**/docs/**',
           '**/fixtures/**',
+          'scripts/**',
+          'cypress/**',
         ],
+        includeTypes: true,
       },
     ],
   },
