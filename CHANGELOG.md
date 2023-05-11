@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 11.0.0-alpha.9 - May 11 2023
+
+- Update import/no-extraneous-dependencies rule to include types and add more directories and files to be included in the devDeps list
+
+## 11.0.0-alpha.8 - Mar 14 2023
+
+- Separate Prettier's config into a separate file
+- Update eslint-plugin-jsdoc to v40
+
 ## 11.0.0-alpha.7 - Mar 7 2023
 
 - Update JSDoc rules
