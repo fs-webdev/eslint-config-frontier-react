@@ -15,6 +15,7 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
         'no-shadow': 'off', // @typescript-eslint/no-shadow requires this to be off
         '@typescript-eslint/no-shadow': 'error',
+        '@typescript-eslint/consistent-type-definitions': 'off',
       },
     },
   ],
