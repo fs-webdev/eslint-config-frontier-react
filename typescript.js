@@ -7,7 +7,7 @@ module.exports = {
       files: ['*.ts?(x)'],
       parser: '@typescript-eslint/parser',
       parserOptions: { warnOnUnsupportedTypeScriptVersion: false },
-      extends: ['plugin:@typescript-eslint/recommended'],
+      extends: ['plugin:@typescript-eslint/recommended', 'plugin:@typescript-eslint/stylistic'],
       rules: {
         'no-use-before-define': 'off', // @typescript-eslint/no-use-before-defined requires this to be off
         '@typescript-eslint/no-use-before-define': ['error', { functions: false }],
@@ -15,12 +15,7 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type': ['error', { allowExpressions: true }],
         'no-shadow': 'off', // @typescript-eslint/no-shadow requires this to be off
         '@typescript-eslint/no-shadow': 'error',
-      },
-    },
-    {
-      files: ['*.test.ts?(x)'],
-      rules: {
-        '@typescript-eslint/no-non-null-assertion': 'off', // We can know for sure if something is null or not for tests because we made the mock data
+        '@typescript-eslint/consistent-type-definitions': 'off',
       },
     },
   ],
