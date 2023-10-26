@@ -26,6 +26,7 @@ module.exports = {
     camelcase: 'off',
     'no-unused-expressions': 'off', // Disable for better @babel version
     '@babel/no-unused-expressions': ['warn', { allowShortCircuit: true }],
+    'import/prefer-default-export': 'off',
     'import/extensions': ['error', 'ignorePackages', { js: 'never', jsx: 'never', ts: 'never', tsx: 'never' }],
     'import/no-extraneous-dependencies': [
       'error',
