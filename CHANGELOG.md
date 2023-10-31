@@ -69,7 +69,7 @@
 
 ## 10.0.0-alpha.1 - Jul 15th 2022
 
-- turn of no-autofix since it breaks cra 5
+- turn off no-autofix since it breaks cra 5
 
 ## 10.0.0-alpha.0 - Jul 7th 2022
 
