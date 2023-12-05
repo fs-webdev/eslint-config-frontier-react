@@ -6,11 +6,18 @@ module.exports = {
   overrides: [
     {
       files: ['*.test.[tj]s?(x)'],
-      extends: ['plugin:jest-dom/recommended', 'plugin:testing-library/react'],
+      extends: ['plugin:testing-library/react'],
       rules: {
-        'jest/no-large-snapshots': 'error',
         'testing-library/no-debugging-utils': 'off',
         'testing-library/no-node-access': 'off', // TODO this rule was enabled for new testing-library
+      },
+    },
+    {
+      files: ['*.test.[tj]s?(x)'],
+      excludedFiles: ['cypress/**/*', '*.cy.[tj]s?(x)'],
+      extends: ['plugin:jest-dom/recommended'],
+      rules: {
+        'jest/no-large-snapshots': 'error',
         'jest/expect-expect': ['warn', { assertFunctionNames: ['expect', '*expect*'] }],
       },
     },
