@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.0.0 - Dec 6th 2023
+
+- Cut the 11.0.0 release
+
 ## 11.0.0-alpha.9 - May 11 2023
 
 - Update import/no-extraneous-dependencies rule to include types and add more directories and files to be included in the devDeps list
