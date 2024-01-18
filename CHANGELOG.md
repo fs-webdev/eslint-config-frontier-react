@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.0.1 - Jan 18th 2024
+
+- @typescript-eslint/consistent-type-imports: Change fixStyle from the default of separate-type-imports to inline-type-imports
+
 ## 11.0.0 - Dec 6th 2023
 
 - Cut the 11.0.0 release
