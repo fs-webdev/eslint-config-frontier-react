@@ -13,5 +13,6 @@ module.exports = {
     'you-dont-need-lodash-underscore/throttle': 'off',
     'you-dont-need-lodash-underscore/extend': 'off',
     'you-dont-need-lodash-underscore/pickBy': 'off',
+    'you-dont-need-lodash-underscore/cloneDeep': 'off',
   },
 }

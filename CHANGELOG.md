@@ -1,3 +1,7 @@
+# 10.1.0 - May 15 2024
+
+- Turn off cloneDeep rule for you-dont-need-lodash (since we dont have access to structuredClone yet in the stack)
+
 # 10.0.0 - Jan 11 2023
 
 - Just get off alpha since things are working as expected
