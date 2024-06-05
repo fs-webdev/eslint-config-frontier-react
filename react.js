@@ -21,6 +21,16 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
     'react/function-component-definition': 'off', // TODO look into this more
     'react/jsx-props-no-spreading': 'off',
+    'react/jsx-no-bind': [
+      'error',
+      {
+        ignoreRefs: true,
+        allowArrowFunctions: true,
+        allowFunctions: true, // 2024-06-05: We decided that it is fine to allowFunctions as there doesn't seem to be benefits for it
+        allowBind: false,
+        ignoreDOMComponents: true,
+      },
+    ],
     'react/jsx-no-useless-fragment': ['error', { allowExpressions: true }],
 
     // Overrides airbnb's rule

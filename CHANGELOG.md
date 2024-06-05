@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.0.2 - Jun 5th 2024
+
+- allowFunctions for react/jsx-no-bind
+
 ## 11.0.1 - Jan 18th 2024
 
 - @typescript-eslint/consistent-type-imports: Change fixStyle from the default of separate-type-imports to inline-type-imports
