@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.1.0 - 2024-08-15
+
+- Include cypress config
+
 ## 11.0.2 - Jun 5th 2024
 
 - allowFunctions for react/jsx-no-bind
