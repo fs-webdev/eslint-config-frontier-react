@@ -26,19 +26,22 @@ module.exports = {
     camelcase: 'off',
     'no-unused-expressions': 'off', // Disable for better @babel version
     '@babel/no-unused-expressions': ['warn', { allowShortCircuit: true }],
+    'import/prefer-default-export': 'off',
     'import/extensions': ['error', 'ignorePackages', { js: 'never', jsx: 'never', ts: 'never', tsx: 'never' }],
     'import/no-extraneous-dependencies': [
       'error',
       {
         devDependencies: [
           '**/setupTests.[tj]s?(x)',
-          '**/*.stories.[tj]s?(x)',
-          '**/*.test.[tj]s?(x)',
-          '**/*.spec.[tj]s?(x)',
+          '**/*.{cy,spec,stories,test}.[tj]s?(x)',
+          '.storybook/**',
           '**/demo/**',
           '**/docs/**',
           '**/fixtures/**',
+          'scripts/**',
+          'cypress/**',
         ],
+        includeTypes: true,
       },
     ],
   },

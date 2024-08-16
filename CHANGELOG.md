@@ -1,8 +1,29 @@
 # CHANGELOG
 
-## 11.0.0 - 2023-04-20
+## 11.1.0 - 2024-08-15
 
 - Include cypress config
+
+## 11.0.2 - Jun 5th 2024
+
+- allowFunctions for react/jsx-no-bind
+
+## 11.0.1 - Jan 18th 2024
+
+- @typescript-eslint/consistent-type-imports: Change fixStyle from the default of separate-type-imports to inline-type-imports
+
+## 11.0.0 - Dec 6th 2023
+
+- Cut the 11.0.0 release
+
+## 11.0.0-alpha.9 - May 11 2023
+
+- Update import/no-extraneous-dependencies rule to include types and add more directories and files to be included in the devDeps list
+
+## 11.0.0-alpha.8 - Mar 14 2023
+
+- Separate Prettier's config into a separate file
+- Update eslint-plugin-jsdoc to v40
 
 ## 11.0.0-alpha.7 - Mar 7 2023
 
@@ -64,7 +85,7 @@
 
 ## 10.0.0-alpha.1 - Jul 15th 2022
 
-- turn of no-autofix since it breaks cra 5
+- turn off no-autofix since it breaks cra 5
 
 ## 10.0.0-alpha.0 - Jul 7th 2022
 
