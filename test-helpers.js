@@ -8,5 +8,8 @@ module.exports = {
   rules: {
     '@fs/zion/prefer-zion-render': 'off',
     'testing-library/no-debugging-utils': 'off',
+    
+    // TODO: consider renaming this file since it effects more than Jest tests
+    '@fs/zion/logical-over-directional': 'warn',
   },
 }
