@@ -2,6 +2,8 @@ module.exports = {
   plugins: ['@fs/zion'],
   rules: {
     '@fs/zion/prefer-zion-render': 'off',
+    // TODO: consider renaming this file since it effects more than Jest tests
+    '@fs/zion/logical-over-directional': 'warn',
   },
   overrides: [
     {
