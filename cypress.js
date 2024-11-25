@@ -11,5 +11,11 @@ module.exports = {
         'import/no-extraneous-dependencies': ['error', { devDependencies: ['**/*.cy.*', '**/*.spec.*'] }],
       },
     },
+    {
+      files: ['cypress.config.*'],
+      rules: {
+        'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+      },
+    },
   ],
 }
