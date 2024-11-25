@@ -1,6 +1,6 @@
 {
   "name": "@fs/eslint-config-frontier-react",
-  "version": "11.2.1",
+  "version": "11.2.2",
   "description": "A common ESLint configuration setup for frontier apps",
   "main": "index.js",
   "engines": {
