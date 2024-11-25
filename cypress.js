@@ -12,7 +12,7 @@ module.exports = {
       },
     },
     {
-      files: ['cypress.config.*'],
+      files: ['cypress.config.*', 'nyc.config.*'],
       rules: {
         'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
       },
