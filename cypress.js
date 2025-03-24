@@ -8,7 +8,7 @@ module.exports = {
         'jest/valid-expect-in-promise': 'off',
         'jest/valid-expect': 'off',
         '@babel/no-unused-expressions': 'off',
-        'import/no-extraneous-dependencies': ['error', { devDependencies: ['**/*.cy.*', '**/*.spec.*'] }],
+        'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
       },
     },
     {
