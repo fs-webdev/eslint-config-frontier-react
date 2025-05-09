@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.3.0 - 2025-05-09
+
+- Refactor dependencies to use peer deps for plugins that we extend
+
 ## 11.1.0 - 2024-08-15
 
 - Include cypress config
