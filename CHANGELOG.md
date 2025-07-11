@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.3.1 - 2025-07-11
+
+- Allow eslint 9 in peerDep
+
 ## 11.3.0 - 2025-05-09
 
 - Refactor dependencies to use peer deps for plugins that we extend
