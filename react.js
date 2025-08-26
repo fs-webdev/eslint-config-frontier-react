@@ -18,7 +18,9 @@ module.exports = {
     'react/require-default-props': 'off',
     'react/no-unknown-property': 'off', // Allows custom properties to be used for css (is-desktop, etc) and for parents (columns, growX, etc)
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
+    'react-hooks/exhaustive-deps': ['warn', {
+      additionalHooks: '(useEvent|useSyncedRef|useMountedRef)', // very stable hooks from frontend-friends
+    }],
     'react/function-component-definition': 'off', // TODO look into this more
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-no-bind': [

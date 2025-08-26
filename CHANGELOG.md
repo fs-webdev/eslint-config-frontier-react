@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.4.0 - 2025-08-27
+
+- Update react-hooks/exhaustive-deps: Allowing some very-stable hooks from @fs/zion-frontend-friends to not be in dependency arrays
+
 ## 11.3.1 - 2025-07-11
 
 - Allow eslint 9 in peerDep
