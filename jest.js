@@ -18,8 +18,11 @@ module.exports = {
     },
     {
       files: ['*'],
-      excludedFiles: ['cypress/**/*', '*.cy.[tj]s?(x)'],
+      excludedFiles: ['cypress/**/*', '**/*.spec.*', '**/*.cy.*'],
       extends: ['plugin:jest/recommended'],
+      rules: {
+        'jest/no-disabled-tests': 'error', // Override warn default to error
+      },
     },
   ],
 }
