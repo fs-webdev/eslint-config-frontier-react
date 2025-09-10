@@ -3,6 +3,7 @@ module.exports = {
   overrides: [
     {
       files: ['**/*.spec.*', '**/*.cy.*'],
+      plugins: ['mocha'],
       rules: {
         'jest/expect-expect': 'off',
         'jest/valid-expect-in-promise': 'off',
