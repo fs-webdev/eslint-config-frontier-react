@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 11.4.0 - 2025-09-10
+
+- Update deps
+- jest/no-disabled-tests warn -> error
+- Add cypress mocha linting rules
+
 ## 11.3.1 - 2025-07-11
 
 - Allow eslint 9 in peerDep
