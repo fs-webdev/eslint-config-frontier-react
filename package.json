@@ -1,6 +1,6 @@
 {
   "name": "@fs/eslint-config-frontier-react",
-  "version": "11.4.0",
+  "version": "11.4.1",
   "description": "A common ESLint configuration setup for frontier apps",
   "main": "index.js",
   "engines": {
@@ -38,7 +38,7 @@
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jest": "^27.9.0",
     "eslint-plugin-jest-dom": "^5.5.0",
-    "eslint-plugin-jsdoc": "^55.3.0",
+    "eslint-plugin-jsdoc": ">=50",
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-mocha": "^10.5.0",

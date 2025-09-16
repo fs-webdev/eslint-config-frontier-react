@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.4.1 - 2025-09-16
+
+- Support node 18 by allowing lower dep version of eslint-plugin-jsdoc
+
 ## 11.4.0 - 2025-09-10
 
 - Update deps
