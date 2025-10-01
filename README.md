@@ -22,6 +22,8 @@ This is how you can use just the es6 rules and prettier and not have to worry ab
   "@fs/eslint-config-frontier-react/es6",
   "@fs/eslint-config-frontier-react/prettierSetup"
 ],
+
+
 ```
 
 #### Adding typescript eslint rules
@@ -36,6 +38,8 @@ Also, it requires that `typescript >=3` be installed in your repo as well. prett
   "@fs/eslint-config-frontier-react/typescript",
   "@fs/eslint-config-frontier-react/prettierSetup"
 ],
+
+
 ```
 
 #### Adding jsdoc eslint rules
@@ -50,7 +54,13 @@ It doesn't come out of the box with @fs/eslint-config-frontier-react, so you'll 
   "@fs/eslint-config-frontier-react",
   "@fs/eslint-config-frontier-react/jsdoc"
 ],
+
+
 ```
+
+#### Alternative: Self-Contained Configuration Package
+
+For teams wanting independence from external config dependencies, we also maintain [@fs/eslint-config-shared](https://www.npmjs.com/package/@fs/eslint-config-shared) - a separate, self-contained package with full control over ESLint updates.
 
 ## CodeClimate Usage (DEPRECATED)
 
@@ -62,19 +72,21 @@ It is important to note that in order for CodeClimate to use this custom config,
 
 1. Add a prepare section to your .codeclimate.yml that will download this eslint-config file. [Prepare Docs](https://docs.codeclimate.com/docs/configuring-the-prepare-step)
 
-   - It should look like this
+- It should look like this
 
-     ```yaml
-     prepare:
-       fetch:
-         - url: 'https://raw.githubusercontent.com/fs-webdev/eslint-config-frontier-react/master/codeclimateEslintRulesv10.js'
-           path: 'eslint-config-frontier-react.js'
-     ```
+```yaml
+prepare:
+  fetch:
+    - url: 'https://raw.githubusercontent.com/fs-webdev/eslint-config-frontier-react/master/codeclimateEslintRulesv10.js'
+      path: 'eslint-config-frontier-react.js'
 
-   - If you also opt into the jsdoc plugin we provide, you'll also need to make a prepare statement for that file.
-   - WARNING: Starting in version 4 of this repo, there is a different codeclimateEslintRules file for every major version
-     that is released. If you are using or upgrading to v8 of this repo, you'll need to change the fetched url file to
-     `codeclimateEslintRulesv10.js`. Notice the "v10" at the end of the filename.
+
+```
+
+- If you also opt into the jsdoc plugin we provide, you'll also need to make a prepare statement for that file.
+- WARNING: Starting in version 4 of this repo, there is a different codeclimateEslintRules file for every major version
+   that is released. If you are using or upgrading to v8 of this repo, you'll need to change the fetched url file to
+   `codeclimateEslintRulesv10.js`. Notice the "v10" at the end of the filename.
 
 2. Make a new eslintrc file for codeclimate to use (that way it can point to the `eslint-config-frontier-react.js` file that codeclimate will prepare in Step 1.)
 
@@ -85,16 +97,18 @@ It is important to note that in order for CodeClimate to use this custom config,
 
 3. Tweak your .codeclimate.yml eslint section to point to the .codeclimate.eslintrc file instead of your default local eslintrc file
 
-   - Your plugin section in your .codeclimate.yml may be larger and more complicated, but the `config:` part should point to the new eslintrc file you made in step 2.
+- Your plugin section in your .codeclimate.yml may be larger and more complicated, but the `config:` part should point to the new eslintrc file you made in step 2.
 
-   ```yaml
-   plugins:
-     eslint:
-       channel: eslint-5
-       config: # <- This line and the line below it are the important lines to add/tweak
-         config: .codeclimate.eslintrc.js # <- this line and the line above it are the important lines to add/tweak
-         extensions:
-           - .js
-           - .html
-       enabled: true
-   ```
+```yaml
+plugins:
+  eslint:
+    channel: eslint-5
+    config: # <- This line and the line below it are the important lines to add/tweak
+      config: .codeclimate.eslintrc.js # <- this line and the line above it are the important lines to add/tweak
+      extensions:
+        - .js
+        - .html
+    enabled: true
+
+
+```

@@ -18,6 +18,23 @@
     "eslint",
     "eslint-config"
   ],
+  "files": [
+    "index.js",
+    "react.js", 
+    "es6.js",
+    "typescript.js",
+    "jest.js",
+    "jsdoc.js",
+    "json.js",
+    "cypress.js",
+    "dont-need-lodash.js",
+    "prettierConfig.js",
+    "prettierSetup.js",
+    "noFixRules.js",
+    "codeclimate*.js",
+    "README.md",
+    "CHANGELOG.md"
+  ],
   "eslintConfig": {
     "extends": [
       "./es6.js",
