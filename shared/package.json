@@ -1,0 +1,52 @@
+{
+  "name": "@fs/eslint-config-frontier-react-shared",
+  "version": "11.5.0",
+  "description": "Self-contained ESLint configuration for FamilySearch projects (independent of Airbnb)",
+  "main": "index.js",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "familysearch",
+    "self-contained",
+    "independent",
+    "javascript",
+    "typescript",
+    "react"
+  ],
+  "author": "FamilySearch",
+  "license": "ISC",
+  "files": [
+    "index.js",
+    "rules/**",
+    "plugin.js"
+  ],
+  "peerDependencies": {
+    "@babel/eslint-parser": "^7.17.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0",
+    "@typescript-eslint/parser": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0",
+    "eslint": "^8.0.0",
+    "eslint-plugin-cypress": "^2.0.0 || ^3.0.0",
+    "eslint-plugin-deprecate": "^0.8.0",
+    "eslint-plugin-html": "^7.0.0 || ^8.0.0",
+    "eslint-plugin-import": "^2.25.0",
+    "eslint-plugin-jest": "^27.0.0 || ^28.0.0",
+    "eslint-plugin-jest-dom": "^4.0.0 || ^5.0.0",
+    "eslint-plugin-jsdoc": "^46.0.0 || ^47.0.0 || ^48.0.0 || ^50.0.0",
+    "eslint-plugin-json": "^3.0.0 || ^4.0.0",
+    "eslint-plugin-mocha": "^10.0.0",
+    "eslint-plugin-prettier": "^4.0.0 || ^5.0.0",
+    "eslint-plugin-promise": "^6.0.0 || ^7.0.0",
+    "eslint-plugin-sonarjs": "^1.0.0 || ^2.0.0 || ^3.0.0",
+    "eslint-plugin-test-selectors": "^2.0.0",
+    "eslint-plugin-testing-library": "^5.0.0 || ^6.0.0",
+    "eslint-plugin-you-dont-need-lodash-underscore": "^6.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@typescript-eslint/eslint-plugin": {
+      "optional": true
+    },
+    "@typescript-eslint/parser": {
+      "optional": true
+    }
+  }
+}
