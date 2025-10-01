@@ -1,5 +1,5 @@
 /**
- * @fs/eslint-config-frontier-react/shared
+ * @fs/eslint-config-shared
  * 
  * Self-contained ESLint configuration for FamilySearch projects.
  * This configuration is completely independent of external config packages like Airbnb,

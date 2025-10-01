@@ -23,6 +23,7 @@ This is how you can use just the es6 rules and prettier and not have to worry ab
   "@fs/eslint-config-frontier-react/prettierSetup"
 ],
 
+
 ```
 
 #### Adding typescript eslint rules
@@ -37,6 +38,7 @@ Also, it requires that `typescript >=3` be installed in your repo as well. prett
   "@fs/eslint-config-frontier-react/typescript",
   "@fs/eslint-config-frontier-react/prettierSetup"
 ],
+
 
 ```
 
@@ -53,30 +55,12 @@ It doesn't come out of the box with @fs/eslint-config-frontier-react, so you'll 
   "@fs/eslint-config-frontier-react/jsdoc"
 ],
 
-```
-
-#### Using the Self-Contained Shared Configuration
-
-We also provide a completely self-contained configuration that doesn't depend on external packages like Airbnb. This gives you full control over ESLint updates without waiting for upstream dependencies.
-
-```json
-"extends": [
-  "@fs/eslint-config-frontier-react/shared"
-],
 
 ```
 
-**Benefits of the shared config:**
-- ✅ Independent ESLint updates (not blocked by Airbnb)
-- ✅ Full control over all rules
-- ✅ Additional quality and testing rules included
-- ✅ Same rule coverage as the main config
+#### Alternative: Self-Contained Configuration Package
 
-**Trade-offs:**
-- 📦 Larger bundle size (rules are inlined vs extended)
-- 🔧 More peer dependencies to install
-
-See the [shared configuration README](./shared/README.md) for detailed usage instructions.
+For teams wanting independence from external config dependencies, we also maintain [@fs/eslint-config-shared](https://www.npmjs.com/package/@fs/eslint-config-shared) - a separate, self-contained package with full control over ESLint updates.
 
 ## CodeClimate Usage (DEPRECATED)
 
@@ -96,10 +80,10 @@ prepare:
     - url: 'https://raw.githubusercontent.com/fs-webdev/eslint-config-frontier-react/master/codeclimateEslintRulesv10.js'
       path: 'eslint-config-frontier-react.js'
 
+
 ```
 
 - If you also opt into the jsdoc plugin we provide, you'll also need to make a prepare statement for that file.
-
 - WARNING: Starting in version 4 of this repo, there is a different codeclimateEslintRules file for every major version
    that is released. If you are using or upgrading to v8 of this repo, you'll need to change the fetched url file to
    `codeclimateEslintRulesv10.js`. Notice the "v10" at the end of the filename.
@@ -125,5 +109,6 @@ plugins:
         - .js
         - .html
     enabled: true
+
 
 ```

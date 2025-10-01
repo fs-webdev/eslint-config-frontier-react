@@ -1,8 +1,20 @@
 {
-  "name": "@fs/eslint-config-frontier-react-shared",
-  "version": "11.5.0",
-  "description": "Self-contained ESLint configuration for FamilySearch projects (independent of Airbnb)",
+  "name": "@fs/eslint-config-shared",
+  "version": "1.0.0",
+  "description": "Self-contained ESLint configuration for FamilySearch projects (independent of external config dependencies)",
   "main": "index.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "echo \"Warning: no test specified\" && exit 0",
+    "publish": "npmPublish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fs-webdev/eslint-config-frontier-react.git",
+    "directory": "shared"
+  },
   "keywords": [
     "eslint",
     "eslintconfig",
@@ -11,10 +23,17 @@
     "independent",
     "javascript",
     "typescript",
-    "react"
+    "react",
+    "testing",
+    "cypress",
+    "jest"
   ],
   "author": "FamilySearch",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fs-webdev/eslint-config-frontier-react/issues"
+  },
+  "homepage": "https://github.com/fs-webdev/eslint-config-frontier-react/tree/master/shared#readme",
   "files": [
     "index.js",
     "rules/**",
@@ -48,5 +67,8 @@
     "@typescript-eslint/parser": {
       "optional": true
     }
+  },
+  "devDependencies": {
+    "@fs/npm-publisher": "^1.6.0"
   }
 }
