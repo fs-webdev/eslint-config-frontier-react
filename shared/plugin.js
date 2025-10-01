@@ -1,16 +1,16 @@
 /**
- * ESLint Plugin for @fs/eslint-config-qa-shared
+ * ESLint Plugin for @fs/eslint-config-frontier-react/shared
  *
  * This plugin provides custom rules that can be used alongside the configuration.
  * To use these rules in your project:
  *
  * 1. Add this as a plugin in your ESLint config:
- *    plugins: ['@fs/eslint-config-qa-shared/plugin']
+ *    plugins: ['@fs/eslint-config-frontier-react/shared/plugin']
  *
  * 2. Enable the rules you want:
  *    rules: {
- *      'qa-shared/logical-over-directional': 'warn',
- *      'qa-shared/no-eslint-disable': 'warn'
+ *      'shared/logical-over-directional': 'warn',
+ *      'shared/no-eslint-disable': 'warn'
  *    }
  */
 
