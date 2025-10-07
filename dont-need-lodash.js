@@ -13,5 +13,6 @@ module.exports = {
     'you-dont-need-lodash-underscore/throttle': 'off',
     'you-dont-need-lodash-underscore/extend': 'off',
     'you-dont-need-lodash-underscore/pickBy': 'off',
+    'you-dont-need-lodash-underscore/clone-deep': 'off', // We'd rather turn off this ESLint rule instead of polyfilling for the 7% unsupported environments https://caniuse.com/?search=structuredclone
   },
 }
