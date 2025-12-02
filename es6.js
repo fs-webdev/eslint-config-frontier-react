@@ -5,10 +5,14 @@
  * */
 module.exports = {
   plugins: ['@babel', 'html'],
-  extends: ['airbnb-base', 'plugin:import/typescript', 'plugin:es-x/restrict-to-es2022',
-    'plugin:es-x/restrict-to-es2022-intl-api',],
+  extends: [
+    'airbnb-base',
+    'plugin:import/typescript',
+    'plugin:es-x/restrict-to-es2022',
+    'plugin:es-x/restrict-to-es2022-intl-api',
+  ],
   env: {
-    es2021: true,
+    es2022: true,
   },
   parser: '@babel/eslint-parser',
   parserOptions: {
