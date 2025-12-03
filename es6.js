@@ -5,12 +5,7 @@
  * */
 module.exports = {
   plugins: ['@babel', 'html'],
-  extends: [
-    'airbnb-base',
-    'plugin:import/typescript',
-    'plugin:es-x/restrict-to-es2022',
-    'plugin:es-x/restrict-to-es2022-intl-api',
-  ],
+  extends: ['airbnb-base', 'plugin:import/typescript'],
   env: {
     es2022: true,
   },
@@ -21,7 +16,6 @@ module.exports = {
     requireConfigFile: false,
   },
   rules: {
-    'es-x/no-array-prototype-toreversed': 'off', // Polyfilled in @fs/react-scripts
     'no-restricted-exports': 'off', // We need to be able to export default
     'no-console': ['warn', { allow: ['error', 'trace', 'time'] }],
     'no-param-reassign': 'off',
