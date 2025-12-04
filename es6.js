@@ -7,7 +7,7 @@ module.exports = {
   plugins: ['@babel', 'html'],
   extends: ['airbnb-base', 'plugin:import/typescript'],
   env: {
-    es2021: true,
+    es2022: true,
   },
   parser: '@babel/eslint-parser',
   parserOptions: {

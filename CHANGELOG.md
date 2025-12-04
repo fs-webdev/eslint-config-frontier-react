@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 11.5.0 - 2025-12-03
+
+- Add eslint-plugin-es-x and update ESLint configuration to prevent ES2023+ unsupported features
+
+## 11.4.2 - 2025-10-08
+
+- turn off lodash.structuredClone rule
+
 ## 11.4.1 - 2025-09-16
 
 - Support node 18 by allowing lower dep version of eslint-plugin-jsdoc
