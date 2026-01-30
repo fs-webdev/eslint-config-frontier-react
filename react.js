@@ -12,6 +12,11 @@ module.exports = {
       presets: ['@babel/preset-react'],
     },
   },
+  settings: {
+    react: {
+      version: "detect"
+    }
+  },
   rules: {
     'react/prop-types': 'off',
     'react/jsx-filename-extension': 'off',
