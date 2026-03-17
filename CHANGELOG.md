@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 12.0.0 - 2026-03-17
+
+- Require Node 20+
+
 ## 11.5.0 - 2025-12-03
 
 - Add eslint-plugin-es-x and update ESLint configuration to prevent ES2023+ unsupported features
