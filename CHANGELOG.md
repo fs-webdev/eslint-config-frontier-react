@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 11.6.0 - 2026-06-24
+
+- Add `node` config (`@fs/eslint-config-frontier-react/node`) for backend repos that run on Node. Sets the `node` env and disables the module-resolution-sensitive `import/*` rules that false-positive under TypeScript NodeNext/ESM. Purely additive — no change for existing consumers.
+
 ## 11.5.0 - 2025-12-03
 
 - Add eslint-plugin-es-x and update ESLint configuration to prevent ES2023+ unsupported features

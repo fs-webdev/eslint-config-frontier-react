@@ -24,6 +24,19 @@ This is how you can use just the es6 rules and prettier and not have to worry ab
 ],
 ```
 
+#### If your repo runs on Node
+
+The default config and the `react` config assume a browser environment. For backend services and tooling that run on Node (and typically as TypeScript ESM with NodeNext module resolution), add the `node` config. It provides the `node` env and turns off the module-resolution-sensitive `import/*` rules that produce false positives under NodeNext (`tsc` verifies resolution instead). Compose it after `es6`/`typescript` and before `prettierSetup`:
+
+```json
+"extends": [
+  "@fs/eslint-config-frontier-react/es6",
+  "@fs/eslint-config-frontier-react/typescript",
+  "@fs/eslint-config-frontier-react/node",
+  "@fs/eslint-config-frontier-react/prettierSetup"
+],
+```
+
 #### Adding typescript eslint rules
 
 We have a configuration for typescript rules that you can use if your repo uses typescript.
