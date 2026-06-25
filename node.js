@@ -44,7 +44,12 @@ module.exports = {
     'import/no-cycle': 'off',
     'import/no-duplicates': 'off',
     'import/order': 'off',
+
+    // Not module-resolution sensitive: this rule only checks whether an
+    // imported package is declared in package.json, so the NodeNext
+    // `.js`->`.ts` rationale above does not apply. Disabled here separately.
     'import/no-extraneous-dependencies': 'off',
+
     // TypeScript's own resolver determines default/named export shapes; the
     // import plugin mis-detects these for some published packages (e.g. axios).
     'import/no-named-as-default': 'off',

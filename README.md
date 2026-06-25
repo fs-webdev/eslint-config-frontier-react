@@ -26,7 +26,7 @@ This is how you can use just the es6 rules and prettier and not have to worry ab
 
 #### If your repo runs on Node
 
-The default config and the `react` config assume a browser environment. For backend services and tooling that run on Node (and typically as TypeScript ESM with NodeNext module resolution), add the `node` config. It provides the `node` env and turns off the module-resolution-sensitive `import/*` rules that produce false positives under NodeNext (`tsc` verifies resolution instead). Compose it after `es6`/`typescript` and before `prettierSetup`:
+The default config and the `react` config assume a browser environment. For backend services and tooling that run on Node (and typically as TypeScript ESM with NodeNext module resolution), add the `node` config. It provides the `node` env, turns off `no-console` (Node services log intentionally), and disables a set of `eslint-plugin-import` rules — both resolution-sensitive rules that false-positive under NodeNext (where `tsc` verifies resolution) and a few ordering/de-dup and export-shape rules the plugin mis-detects. Compose it after `es6`/`typescript` and before `prettierSetup`:
 
 ```json
 "extends": [

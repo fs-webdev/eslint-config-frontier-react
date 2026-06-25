@@ -2,7 +2,7 @@
 
 ## 11.6.0 - 2026-06-24
 
-- Add `node` config (`@fs/eslint-config-frontier-react/node`) for backend repos that run on Node. Sets the `node` env and disables the module-resolution-sensitive `import/*` rules that false-positive under TypeScript NodeNext/ESM. Purely additive — no change for existing consumers.
+- Add `node` config (`@fs/eslint-config-frontier-react/node`) for backend repos that run on Node. Sets the `node` env, turns off `no-console`, and disables a set of `eslint-plugin-import` rules — resolution-sensitive rules (`import/no-unresolved`, `import/extensions`, etc.) that false-positive under TypeScript NodeNext/ESM, plus a few ordering/de-dup and export-shape rules the plugin mis-detects. Purely additive — no change for existing consumers.
 
 ## 11.5.0 - 2025-12-03
 
