@@ -31,17 +31,24 @@ module.exports = {
     // Node services and scripts log to the console intentionally.
     'no-console': 'off',
 
-    // The following eslint-plugin-import rules are module-resolution
-    // sensitive. Under TypeScript NodeNext/ESM — where a local import is
+    // The following eslint-plugin-import rules walk the import resolver.
+    // eslint-plugin-import resolves with eslint-import-resolver-node, not
+    // `tsc`, so under TypeScript NodeNext/ESM — where a local import is
     // written with a `.js` extension that resolves to `.ts`/`.tsx` source —
-    // the import resolver produces false positives. `tsc` already verifies
-    // module resolution end to end, so we defer to it and disable these here.
+    // the resolver can't bridge `.js`->`.ts` and produces false positives.
+    // `tsc` already verifies module resolution end to end, so we defer to it
+    // and disable these here.
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
     'import/no-useless-path-segments': 'off',
     'import/no-relative-packages': 'off',
     'import/no-self-import': 'off',
     'import/no-cycle': 'off',
+
+    // These two don't false-positive under NodeNext — they compare specifier
+    // strings rather than walk the resolver. Disabled for consistency only:
+    // import ordering and de-duplication are already handled by the editor
+    // and surfaced by `tsc`/Prettier, so enforcing them here is redundant.
     'import/no-duplicates': 'off',
     'import/order': 'off',
 
