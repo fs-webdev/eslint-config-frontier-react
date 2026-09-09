@@ -1,5 +1,22 @@
 # CHANGELOG
 
+## 11.8.0 - 2026-09-09
+
+- Replace Travis CI with GitHub Actions (`.github/workflows/ci.yml`). PRs now run lint + config
+  validation; pushes to `master` publish to Artifactory exactly as the Travis `deploy:` block did.
+- `npm test` is a real test now. It was `echo "Warning: no test specified" && exit 0`; it now runs
+  `scripts/validateConfigs.js`, which makes ESLint fully resolve every shareable config in this
+  repo. Previously a typo'd rule name or a broken `extends` only surfaced once a consumer upgraded.
+- Add `npm run lint` for this repo's own files.
+- **Require Node 24.** `engines.node` goes from `>=18` to `>=24`, and `.nvmrc` from 18 to 24.
+  Node 24 is a company mandate, and this config already didn't work below it: `eslint-plugin-jsdoc`
+  (peer `>=50`, currently resolving to 63.x, which declares `engines.node: ^22.13.0 || >=24`) uses
+  the `v` regex flag, so `jsdoc.js` and `noFixRules.js` could not load on Node 18 at all. Consumers
+  on Node < 24 will now see an `EBADENGINE` warning on install, or a hard failure under
+  `engine-strict`. Released as a minor rather than a major by request.
+- Remove the eight `codeclimateEslintRules*.js` files and the last README references to them. We
+  don't use codeclimate anymore, and nothing in this repo generated or consumed those files.
+
 ## 11.6.0 - 2026-06-24
 
 - Add `node` config (`@fs/eslint-config-frontier-react/node`) for backend repos that run on Node. Sets the `node` env, turns off `no-console`, and disables a set of `eslint-plugin-import` rules — resolution-sensitive rules (`import/no-unresolved`, `import/extensions`, etc.) that false-positive under TypeScript NodeNext/ESM, plus a few ordering/de-dup and export-shape rules the plugin mis-detects. Purely additive — no change for existing consumers.

@@ -1,0 +1,55 @@
+# Lint, validate every shareable config, and publish to Artifactory. Replaces .travis.yml.
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  # Cancel superseded PR runs, but let a master run finish -- it may be mid-publish.
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      # `scope: '@fs'` matches the `@fs:registry=` line Travis hand-wrote.
+      # No `cache: npm` -- package-lock.json is gitignored, and the cache needs a lockfile.
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          registry-url: https://familysearch.jfrog.io/artifactory/api/npm/fs-npm-prod-virtual/
+          scope: '@fs'
+
+      # NODE_AUTH_TOKEN must be step-level env on every step that hits the registry.
+      # setup-node exports it job-wide as a placeholder, so setting it only there means
+      # npm sends the placeholder and jfrog answers E401.
+      #
+      # `npm install`, not `npm ci` -- no committed lockfile.
+      - name: Install
+        run: npm install
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+
+      - name: Lint
+        run: npm run lint
+
+      # Catches configs that fail to resolve before consumers do.
+      - name: Test
+        run: npm test
+
+      - name: Publish
+        if: github.event_name == 'push'
+        run: npm run publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
