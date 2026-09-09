@@ -11,11 +11,8 @@
 - Bump `.nvmrc` from 18 to 24. `eslint-plugin-jsdoc` (peer `>=50`, currently resolving to 63.x,
   which declares `engines.node: ^22.13.0 || >=24`) uses the `v` regex flag, so `jsdoc.js` and
   `noFixRules.js` cannot load on Node 18 at all. `engines.node` is unchanged at `>=18`.
-- Remove `codeclimateEslintRules.js` and `codeclimateEslintRulesv4.js` through
-  `codeclimateEslintRulesv10.js`. Codeclimate support was dropped in v11; nothing in this repo
-  generated or consumed these files anymore. Consumers on v10 or earlier who still fetch them in a
-  codeclimate `prepare` step must pin the URL to commit `f89188c` instead of `master` — see the
-  README.
+- Remove the eight `codeclimateEslintRules*.js` files and the last README references to them. We
+  don't use codeclimate anymore, and nothing in this repo generated or consumed those files.
 
 ## 11.6.0 - 2026-06-24
 

@@ -82,21 +82,3 @@ anything -- so a typo'd rule name, an `extends` that no longer resolves, or a pl
 
 Merging to `master` publishes the version in `package.json` to Artifactory, so bump the version and
 add a CHANGELOG entry in your PR.
-
-## CodeClimate Usage (REMOVED)
-
-### As of v11 of this repository, we no longer keep codeclimate compatability. [See this Architectural Decision why.](https://www.familysearch.org/frontier/docs/architectural-decisions/020-eslint-codeclimate-compatability)
-
-The `codeclimateEslintRules*.js` files, and the instructions for wiring them into a
-codeclimate `prepare` step, were removed in v11.7.0. Nothing on `master` generates or
-consumes them anymore.
-
-If you are still on v10 or earlier and depend on those files, pin your `prepare` fetch to the
-last commit that had them (`f89188c`) instead of `master`:
-
-```yaml
-prepare:
-  fetch:
-    - url: 'https://raw.githubusercontent.com/fs-webdev/eslint-config-frontier-react/f89188c/codeclimateEslintRulesv10.js'
-      path: 'eslint-config-frontier-react.js'
-```
