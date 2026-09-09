@@ -38,8 +38,12 @@ jobs:
       # from -- and publish to -- the jfrog virtual registry, everything else comes from
       # the public npm registry.
       #
-      # setup-node exports NPM_CONFIG_USERCONFIG and NODE_AUTH_TOKEN job-wide, so auth
-      # survives every later step.
+      # setup-node writes the literal string `${NODE_AUTH_TOKEN}` into the .npmrc it
+      # generates, for npm to expand at runtime -- it does NOT bake the secret in. It also
+      # exports NODE_AUTH_TOKEN job-wide as the placeholder `XXXXX-XXXXX-XXXXX-XXXXX`, so
+      # the secret has to be set as step-level env on every step that talks to the registry
+      # (step env beats the job-wide value). Setting it only here got us E401 from jfrog,
+      # because npm expanded the placeholder and sent that as the token.
       #
       # No `cache: npm` on purpose -- package-lock.json is gitignored in this repo, and
       # setup-node's npm cache hard-fails when it can't find a lockfile.
@@ -48,14 +52,14 @@ jobs:
           node-version-file: .nvmrc
           registry-url: https://familysearch.jfrog.io/artifactory/api/npm/fs-npm-prod-virtual/
           scope: '@fs'
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
 
       # `npm install`, not `npm ci` -- there is no committed lockfile. This also pulls in
       # the eslint plugins declared as peerDependencies, which lint and validate:configs
       # both need.
       - name: Install
         run: npm install
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
 
       - name: Lint
         run: npm run lint
