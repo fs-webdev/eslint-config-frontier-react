@@ -4,13 +4,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-A shared ESLint config package (`@fs/eslint-config-frontier-react`) consumed by FamilySearch frontier apps. It has no unit test suite; `npm test` is a stub that echoes and exits 0. CI runs on GitHub Actions (`.github/workflows/ci.yml`) and auto-publishes to the FamilySearch Artifactory npm registry on push to `master`.
+A shared ESLint config package (`@fs/eslint-config-frontier-react`) consumed by FamilySearch frontier apps. `npm test` does not run unit tests — it resolves every shareable config (see below). CI runs on GitHub Actions (`.github/workflows/ci.yml`) and auto-publishes to the FamilySearch Artifactory npm registry on push to `master`.
 
 ## CI and validation
 
-`.github/workflows/ci.yml` is a single `ci` job. PRs run `npm install` → `npm run lint` → `npm run validate:configs`; pushes to `master` run those and then `npm run publish`.
+`.github/workflows/ci.yml` is a single `ci` job. PRs run `npm install` → `npm run lint` → `npm test`; pushes to `master` run those and then `npm run publish`.
 
-`npm run validate:configs` (`scripts/validateConfigs.js`) is the only real check in the repo. It runs `eslint --print-config` against every top-level `*.js` config, which makes ESLint fully resolve each one the way a consuming app does — catching unresolvable `extends`, unknown plugins, and typo'd rule names. It also fails a config that resolves to zero rules. Two details it handles that are easy to break:
+`npm test` runs `scripts/validateConfigs.js` and is the only real check in the repo — there are no unit tests. It runs `eslint --print-config` against every top-level `*.js` config, which makes ESLint fully resolve each one the way a consuming app does — catching unresolvable `extends`, unknown plugins, and typo'd rule names. It also fails a config that resolves to zero rules. Two details it handles that are easy to break:
 
 - It symlinks the package into its own `node_modules/@fs/`, because `index.js` extends its siblings by package name (`@fs/eslint-config-frontier-react/react`), which otherwise only resolves downstream.
 - Override-only configs (`json.js` → `*.json`, `typescript.js` → `*.ts?(x)`, `esx.js` via `src/**` in `index.js`) are resolved against several target paths, since a single `.js` path would report them as empty.

@@ -67,18 +67,19 @@ It doesn't come out of the box with @fs/eslint-config-frontier-react, so you'll 
 
 ## Development
 
-There is no unit test suite. CI (`.github/workflows/ci.yml`) runs two checks on every PR, and
-both are worth running locally before you push:
+CI (`.github/workflows/ci.yml`) runs two checks on every PR, and both are worth running locally
+before you push:
 
 ```sh
-npm run lint             # eslint over this repo's own files
-npm run validate:configs # asks eslint to fully resolve every shareable config in the repo
+npm run lint  # eslint over this repo's own files
+npm test      # asks eslint to fully resolve every shareable config in the repo
 ```
 
-`validate:configs` is the one that matters. It runs `eslint --print-config` against every config
-file here, which forces ESLint to do the same resolution work a consuming app does before it lints
-anything -- so a typo'd rule name, an `extends` that no longer resolves, or a plugin missing from
-`peerDependencies` fails the PR instead of shipping to consumers.
+`npm test` is the one that matters. It runs `scripts/validateConfigs.js`, which does an
+`eslint --print-config` against every config file here -- forcing ESLint to do the same resolution
+work a consuming app does before it lints anything. A typo'd rule name, an `extends` that no longer
+resolves, or a plugin missing from `peerDependencies` fails the PR instead of shipping to
+consumers.
 
 Merging to `master` publishes the version in `package.json` to Artifactory, so bump the version and
 add a CHANGELOG entry in your PR.

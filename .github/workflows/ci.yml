@@ -44,10 +44,9 @@ jobs:
       - name: Lint
         run: npm run lint
 
-      # The real check here -- `npm test` is a stub. Catches configs that fail to resolve
-      # before consumers do.
-      - name: Validate configs
-        run: npm run validate:configs
+      # Catches configs that fail to resolve before consumers do.
+      - name: Test
+        run: npm test
 
       - name: Publish
         if: github.event_name == 'push'

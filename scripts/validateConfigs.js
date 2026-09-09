@@ -6,7 +6,7 @@
  * config in the repo, which is the same work ESLint does in a consuming app before it lints a
  * single file. If a config resolves, consumers can extend it.
  *
- * Run it with `npm run validate:configs`.
+ * This is what `npm test` runs.
  */
 
 /* eslint-disable no-console -- this is a CLI script; the console output IS the report */

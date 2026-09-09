@@ -4,9 +4,9 @@
 
 - Replace Travis CI with GitHub Actions (`.github/workflows/ci.yml`). PRs now run lint + config
   validation; pushes to `master` publish to Artifactory exactly as the Travis `deploy:` block did.
-- Add `npm run validate:configs`, which makes ESLint fully resolve every shareable config in this
-  repo. This repo has no unit tests, so previously a typo'd rule name or a broken `extends` only
-  surfaced once a consumer upgraded.
+- `npm test` is a real test now. It was `echo "Warning: no test specified" && exit 0`; it now runs
+  `scripts/validateConfigs.js`, which makes ESLint fully resolve every shareable config in this
+  repo. Previously a typo'd rule name or a broken `extends` only surfaced once a consumer upgraded.
 - Add `npm run lint` for this repo's own files.
 - **Require Node 24.** `engines.node` goes from `>=18` to `>=24`, and `.nvmrc` from 18 to 24.
   Node 24 is a company mandate, and this config already didn't work below it: `eslint-plugin-jsdoc`
