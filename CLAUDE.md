@@ -21,7 +21,7 @@ Notes on the workflow itself: `npm install`, not `npm ci`, and no `cache: npm` �
 
 Pushing to `master` triggers the workflow's `Publish` step, which runs `npm run publish` (`npmPublish` from `@fs/npm-publisher`) authenticated with `secrets.NPM_PUBLISH_TOKEN`. Bump the version in `package.json` and add a CHANGELOG entry before merging.
 
-`.nvmrc` is `24` because `eslint-plugin-jsdoc` uses the `v` regex flag, which needs Node 20+; on Node 18 both `jsdoc.js` and `noFixRules.js` fail to load at all. `engines.node` is still `>=18` — that's a consumer-facing claim and hasn't been revisited.
+This package requires Node 24: `engines.node` is `>=24` and `.nvmrc` is `24`. Node 24 is a company mandate, and it's also a real floor here — `eslint-plugin-jsdoc` uses the `v` regex flag, so `jsdoc.js` and `noFixRules.js` cannot load below Node 20 at all. Keep `.nvmrc` and `engines.node` in step if either moves.
 
 ## Config file architecture
 
