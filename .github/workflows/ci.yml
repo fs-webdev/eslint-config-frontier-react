@@ -1,0 +1,73 @@
+# Lint, validate every shareable config, and publish to Artifactory. Replaces .travis.yml.
+#
+# PRs run install + lint + config validation. Pushes to master additionally publish the
+# version committed in package.json, which is what Travis's `deploy: provider: script`
+# block did.
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+# Nothing here touches the GitHub API -- checkout only reads, and the publish step
+# authenticates to Artifactory with NODE_AUTH_TOKEN -- so keep GITHUB_TOKEN read-only
+# rather than leave a write-scoped credential in the environment while `npm install`
+# runs lifecycle scripts from the whole dependency tree.
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  # Superseded PR pushes are safe to cancel; a publish run partway through `npm publish`
+  # is not, so let master runs finish.
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      # Replaces the .travis.yml `before_install` block that hand-wrote .npmrc.
+      #
+      # `scope: '@fs'` matches what Travis wrote (`@fs:registry=`): @fs packages resolve
+      # from -- and publish to -- the jfrog virtual registry, everything else comes from
+      # the public npm registry.
+      #
+      # setup-node exports NPM_CONFIG_USERCONFIG and NODE_AUTH_TOKEN job-wide, so auth
+      # survives every later step.
+      #
+      # No `cache: npm` on purpose -- package-lock.json is gitignored in this repo, and
+      # setup-node's npm cache hard-fails when it can't find a lockfile.
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          registry-url: https://familysearch.jfrog.io/artifactory/api/npm/fs-npm-prod-virtual/
+          scope: '@fs'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+
+      # `npm install`, not `npm ci` -- there is no committed lockfile. This also pulls in
+      # the eslint plugins declared as peerDependencies, which lint and validate:configs
+      # both need.
+      - name: Install
+        run: npm install
+
+      - name: Lint
+        run: npm run lint
+
+      # The real check in this pipeline. `npm test` is a stub, so without this nothing
+      # would catch a config that fails to resolve before consumers hit it.
+      - name: Validate configs
+        run: npm run validate:configs
+
+      # Replaces the Travis `deploy:` block. Guarded to pushes so PR runs don't publish.
+      - name: Publish
+        if: github.event_name == 'push'
+        run: npm run publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}

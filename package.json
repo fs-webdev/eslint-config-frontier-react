@@ -1,13 +1,15 @@
 {
   "name": "@fs/eslint-config-frontier-react",
-  "version": "11.6.0",
+  "version": "11.7.0",
   "description": "A common ESLint configuration setup for frontier apps",
   "main": "index.js",
   "engines": {
     "node": ">=18"
   },
   "scripts": {
+    "lint": "eslint .",
     "test": "echo \"Warning: no test specified\" && exit 0",
+    "validate:configs": "node scripts/validateConfigs.js",
     "publish": "npmPublish"
   },
   "repository": {
